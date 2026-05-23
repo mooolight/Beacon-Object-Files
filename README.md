@@ -21,24 +21,52 @@
 
 ## Collection
 
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[registry](persistence/registry/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+
 
 
 ## Credential Access
 
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[registry](persistence/registry/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+
 
 ## Discovery
+
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[registry](persistence/registry/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
 
 
 ## Execution
 
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[registry](persistence/registry/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+
 
 ## BYOVD
+
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[registry](persistence/registry/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
 
 
 ## ProcessInjection
 
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[registry](persistence/registry/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+
 
 ## ActiveDirectory
+
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[registry](persistence/registry/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
 
 
 ## Persistence
@@ -48,6 +76,10 @@
 | **[registry](persistence/registry/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
 
 ## PrivilegeEscalation
+
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[registry](persistence/registry/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
 
 
 
