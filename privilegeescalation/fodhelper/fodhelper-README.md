@@ -17,8 +17,7 @@ Executes the fodhelper binary privilege escalation technique
 
 ## Demonstration
 
-https://github.com/user-attachments/assets/f94c1118-96ad-4347-bce3-bbac9bb8b931.mp4
-
+![demo.webm](https://github.com/user-attachments/assets/2662c4a6-b536-42f9-959f-64e706c921df)
 
 
 
