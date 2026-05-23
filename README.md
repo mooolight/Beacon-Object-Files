@@ -41,5 +41,11 @@
 ## ActiveDirectory
 
 
+## Persistence
+
+
+## PrivilegeEscalation
+
+
 
 
