@@ -1,0 +1,29 @@
+# author @mooolight
+
+beacon_command_register(
+	"tokeninfo_recon", "Prints out target process' token attributes information such as TokenSource, TokenType, TokenImpersonationLevel, TokenSessionId, etc.",
+	"INFO:\nPrints out target process' token attributes information such as TokenSource, TokenType, TokenImpersonationLevel, TokenSessionId, etc.\n\n".
+	"ARGUMENTS:\n[<targetProc>] : This is the process to acquire token context from.\n\n".
+	"USAGE:\ntokeninfo_recon <targetProc>\n\n".
+	"EXAMPLES:\ntokeninfo_recon notepad.exe\n\n");
+
+alias tokeninfo_recon {
+    $bid = $1;
+	$targetProc = $2;
+	
+	if ($targetProc eq "") {
+        berror($bid, "Please specify the target process to get the token attributes from.\n");
+        return;
+    }
+
+    # Read in the right BOF file
+    $handle = openf(script_resource("tokeninfo_recon.o"));
+    $data   = readb($handle, -1);
+    closef($handle);
+
+    # Pack our arguments
+    $arg_data  = bof_pack($bid, "z", targetProc);
+	
+    blog($bid, "Prints out target process' token attributes information.");
+    beacon_inline_execute($bid, $data, "go", $arg_data);
+}
