@@ -4,8 +4,7 @@ Prints out target process' token attributes information such as TokenSource, Tok
 > This operation requires appropriate privileges to see the handle to the target process object and to modify the command line attributes of it.
 
 ## Arguments
-* `targetProc` : 
-* `spoofCmdLine` : 
+* `targetProc`
 
 ## Usage
 * `tokeninfo_recon <targetProc>`
