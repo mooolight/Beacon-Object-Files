@@ -75,7 +75,7 @@
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[registry](persistence/registry/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+| **[persistence](persistence/pers-runkeys-bof/)**     | Executes the runkeys persistence technique.|
 
 ## PrivilegeEscalation
 
