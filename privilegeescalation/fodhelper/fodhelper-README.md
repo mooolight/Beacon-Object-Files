@@ -18,6 +18,10 @@ Executes the fodhelper binary privilege escalation technique
 ## Demonstration
 ![demo.webm](https://github.com/user-attachments/assets/2662c4a6-b536-42f9-959f-64e706c921df)
 
+<p align="center" width="100%">
+<video src="https://github.com/user-attachments/assets/2662c4a6-b536-42f9-959f-64e706c921df" width="80%" controls></video>
+</p>
+
 
 ## After cleanup:
 ![](/assets/fodhelper-registry-aftercleanup.png)
