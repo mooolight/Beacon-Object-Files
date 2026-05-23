@@ -1,5 +1,5 @@
 # procinj-sectionmaps
-Executes the classic process injection technique
+Executes the classic process injection technique through section maps.
 
 > This operation has no pre-requisites.
 
