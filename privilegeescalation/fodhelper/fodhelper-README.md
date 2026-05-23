@@ -16,7 +16,7 @@ Executes the fodhelper binary privilege escalation technique
 * `fodhelper <path-to-dll/exe>`
 
 ## Demonstration
-![](/assets/privesc-fodhelper-demo.webm)
+[Watch Demo](/assets/privesc-fodhelper-demo.webm)
 
 ## After cleanup:
 ![](/assets/fodhelper-registry-aftercleanup.png)
