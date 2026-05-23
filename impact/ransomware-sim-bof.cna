@@ -1,0 +1,29 @@
+# author @mooolight
+
+beacon_command_register(
+	"ransomware-sim", "Executes the ransomware simulation on a proof of concept file with Access Control of the highest privilege.",
+	"INFO:\nExecutes the ransomware-sim impact simulation.\n\n".
+	"ARGUMENTS:\n[<file-to-be-encrypted>]: specify the file to be encrypted given an NT AUTHORITY\SYSTEM privileges.\n\n" .
+	"USAGE:\nransomware-sim "<file-to-be-encrypted>"\n\n" .
+	"EXAMPLES:\nransomware-sim \"C:\\Users\\Test\\Documents\\BOF\\impact\\test.txt" \n\n");
+	
+alias ransomware-sim {
+    $bid = $1;
+    $path = $2;
+
+    if ($path eq "") {
+        berror($bid, "Please specify file path to encrypt.\n");
+        return;
+    }
+	
+    # Read in the right BOF file
+    $handle = openf(script_resource("ransomware-sim-bof.o"));
+    $data   = readb($handle, -1);
+    closef($handle);
+
+    # Pack our arguments
+    $arg_data  = bof_pack($bid, "z", $path);
+
+    blog($bid, "Tasked to execute the ransomware simulation on a proof of concept file with Access Control of the highest privilege.");
+    beacon_inline_execute($bid, $data, "go", $arg_data);
+}
