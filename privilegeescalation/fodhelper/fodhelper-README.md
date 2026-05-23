@@ -15,6 +15,9 @@ Executes the fodhelper binary privilege escalation technique
 ## Example
 * `fodhelper <path-to-dll/exe>`
 
+After cleanup:
+![Alt text](assets/fodhelper-registry-aftercleanup.png)
+
 ## Questions:
 * Why use this technique?
 * On what specific condition will this technique be effective?
