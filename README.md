@@ -43,6 +43,9 @@
 
 ## Persistence
 
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[registry](persistence/registry/)**     | Maps AI tooling on Windows developer endpoints and highlights their configuration artifacts that may expose server definitions, commands, arguments, and embedded credentials. |
 
 ## PrivilegeEscalation
 
