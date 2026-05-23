@@ -75,7 +75,7 @@
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[persistence](persistence/pers-runkeys-bof/)**     | Executes the runkeys persistence technique.|
+| **[pers-runkeys](persistence/pers-runkeys-bof/)**     | Executes the runkeys persistence technique.|
 
 ## PrivilegeEscalation
 
