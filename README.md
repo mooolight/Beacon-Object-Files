@@ -13,6 +13,8 @@
 [BYOVD](#byovd)  
 [ProcessInjection](#processinjection)  
 [ActiveDirectory](#activedirectory)  
+[Persistence](#persistence)  
+[PrivilegeEscalation](#privilegeescalation)  
 
 
 </div>
