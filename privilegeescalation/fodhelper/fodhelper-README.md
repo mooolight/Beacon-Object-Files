@@ -17,7 +17,7 @@ Executes the fodhelper binary privilege escalation technique
 
 ## Demonstration
 
-![privesc-fodhelper-demo.webm](https://github.com/user-attachments/assets/2662c4a6-b536-42f9-959f-64e706c921df)
+![](https://github.com/user-attachments/assets/2662c4a6-b536-42f9-959f-64e706c921df)
 
 
 ## After cleanup:
