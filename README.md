@@ -79,7 +79,7 @@
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[fodhelper](persistence/fodhelper/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+| **[fodhelper](privilegeescalation/fodhelper/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
 
 
 
