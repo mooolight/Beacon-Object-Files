@@ -61,7 +61,7 @@
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[registry](persistence/registry/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+| **[processinjection](processinjection/procinj-sectionmaps/)**     | Executes the classic process injection technique.|
 
 
 ## ActiveDirectory
