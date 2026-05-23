@@ -61,7 +61,7 @@
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[processinjection](processinjection/procinj-sectionmaps/)**     | Executes the classic process injection technique.|
+| **[processinjection](processinjection/procinj-sectionmaps/)**     | Executes the classic process injection technique through section maps.|
 
 
 ## ActiveDirectory
