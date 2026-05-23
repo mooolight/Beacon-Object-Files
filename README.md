@@ -3,7 +3,7 @@
 
 <div align='center'>
 
-## Table of Contents (MITRE taxonomy)
+## Table of Contents
 
 [Collection](#collection)  
 [Credential Access](#credential-access)  
