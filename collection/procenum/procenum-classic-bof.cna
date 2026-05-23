@@ -1,0 +1,29 @@
+# author @mooolight
+
+beacon_command_register(
+	"procenum-classic", "Finds the PID of a process name given.",
+	"INFO:\nFinds the PID of a process name given.\n\n".
+	"ARGUMENTS:".
+	"USAGE:\nprocenum-classic\n\n".
+	"EXAMPLES:\nprocenum-classic\n\n");
+
+alias procenum-classic {
+    $bid = $1;
+	$procName = $2;
+	
+	if ($procName eq "") {
+        berror($bid, "Please specify the target process.\n");
+        return;
+    }
+	
+    # Read in the right BOF file
+    $handle = openf(script_resource("procenum-classic-bof.o"));
+    $data   = readb($handle, -1);
+    closef($handle);
+
+    # Pack our arguments
+    $arg_data  = bof_pack($bid, "z", procName);
+	
+    blog($bid, "Finds the PID of a process name given.");
+    beacon_inline_execute($bid, $data, "go", $arg_data);
+}
