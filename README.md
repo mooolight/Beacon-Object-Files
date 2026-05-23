@@ -23,7 +23,7 @@
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[procenum](collection/procenum/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+| **[procenum](collection/procenum/)**     | Finds the PID of a process name given. This operation requires appropriate privileges to see the handle to the target process object.|
 
 
 
