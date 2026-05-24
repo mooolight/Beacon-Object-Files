@@ -1,5 +1,9 @@
 # Windows BOF-Collections
 
+## Tool for Testing
+- I have used COFFLoader from TrustedSec for local BOF testing.
+- Link: https://github.com/trustedsec/COFFLoader
+
 
 <div align='center'>
 
