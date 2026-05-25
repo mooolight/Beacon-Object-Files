@@ -27,3 +27,6 @@ Executes the ransomware simulation on a proof of concept file with Access Contro
 # Missing
 - .o file
 - Demo .webm/mp4 file PoC
+- Blog post
+- Yara rule
+- 
