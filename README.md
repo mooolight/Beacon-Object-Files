@@ -20,7 +20,7 @@
 [Persistence](#persistence)  
 [PrivilegeEscalation](#privilegeescalation)  
 [Impact](#impact)  
-
+[ImpairingDefenses](#impairingdefenses)  
 
 
 </div>
@@ -62,14 +62,14 @@
 | **[RTCore](byovd/rtcore/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
 
 
-## ProcessInjection
+## Process Injection
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **[processinjection](processinjection/procinj-sectionmaps/)**     | Executes the classic process injection technique through section maps.|
 
 
-## ActiveDirectory
+## Active Directory
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -82,12 +82,18 @@
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **[pers-runkeys](persistence/pers-runkeys-bof/)**     | Executes the runkeys persistence technique.|
 
-## PrivilegeEscalation
+## Privilege Escalation
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **[fodhelper](privilegeescalation/fodhelper/)**     | The “fodhelper UAC bypass” is a well-known Windows privilege-escalation technique that abuses the auto-elevated Microsoft binary fodhelper.exe to bypass normal User Account Control (UAC) prompts.|
 
+
+## Impairing Defenses
+
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[sample](impairingdefenses/sample)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
 
 ## Impact
 
