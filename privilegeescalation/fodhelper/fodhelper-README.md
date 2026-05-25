@@ -38,5 +38,5 @@ Executes the fodhelper binary privilege escalation technique
 - 4\. In Cobalt strike, use the script manager to load the .cna script to import the tool. 
 
 # Missing
-- Blog post
+- Blog post (theory) + Reversing
 - Yara rule
