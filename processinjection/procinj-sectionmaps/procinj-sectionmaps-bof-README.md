@@ -30,5 +30,5 @@ Executes the classic process injection technique through section maps.
 # Missing
 - .o file
 - Demo .webm/mp4 file PoC
-- Blog post
+- Blog post (theory) + Reversing
 - Yara rule
