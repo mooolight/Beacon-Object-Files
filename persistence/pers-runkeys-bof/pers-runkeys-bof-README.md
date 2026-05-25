@@ -29,5 +29,5 @@ Executes the runkeys persistence technique
 # Missing
 - .o file
 - Demo .webm/mp4 file PoC
-- Blog post
+- Blog post (theory) + Reversing
 - Yara rule
