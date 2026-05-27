@@ -59,7 +59,7 @@ Link: https://github.com/trustedsec/COFFLoader
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[RTCore](byovd/rtcore/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+| **[RTCore](byovd/rtcore/)**     | Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.|
 
 
 ## Process Injection
