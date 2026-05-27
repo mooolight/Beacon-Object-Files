@@ -44,6 +44,52 @@ BYTE edrListHash[MAX_EDR_STRINGS][MAX_EDR_STRING_LENGTH] = {
     0xA681F182, 0x0F2695D0 };
 
 
+// Func defn: Normal version of GetModuleHandle
+// This function is equivalent to "loaded_module_base_from_hash" in BokuLoader.c
+HMODULE WINAPI hlpGetModuleHandle(DWORD dllHash) {
+	// get the offset of Process Environment Block
+#ifdef _M_IX86
+	_PEB * ProcEnvBlk = (_PEB *) __readfsdword(0x30);
+#else
+	_PEB * ProcEnvBlk = (_PEB *) __readgsqword(0x60);
+#endif
+
+	// return base address of a calling module
+	if (!dllHash)
+		return (HMODULE) (ProcEnvBlk->lpImageBaseAddress);
+
+	PEB_LDR_DATA * Ldr = ProcEnvBlk->pLdr;
+	LIST_ENTRY * ModuleList = NULL;
+	
+	// Caveat: Create a 'buffer' zone BEFORE using 'hlpGetModuleHandle' (e.g. xLoadLibrary() function)
+	ModuleList = &Ldr->InMemoryOrderModuleList;
+	LIST_ENTRY * pStartListEntry = ModuleList->Flink;
+
+	for (LIST_ENTRY *  pListEntry  = pStartListEntry;  		// start from beginning of InMemoryOrderModuleList
+					   pListEntry != ModuleList;	    	// walk all list entries
+					   pListEntry  = pListEntry->Flink)	{
+		
+		// get current Data Table Entry
+		LDR_DATA_TABLE_ENTRY * pEntry = (LDR_DATA_TABLE_ENTRY *) ((BYTE *) pListEntry - sizeof(LIST_ENTRY));
+
+		// check if module is found and return its base address
+		//if (StringCompareA((const char *) pEntry->BaseDllName.Buffer, (const char *) sModuleName) == 0)
+		//	return (HMODULE) pEntry->DllBase;
+		wchar_t* uniDllStr = (wchar_t*)pEntry->FullDllName.Buffer;
+		size_t size = MSVCRT$wcstombs(NULL,uniDllStr, 0);
+		char* tmpDll = MSVCRT$malloc(size + 1);
+		MSVCRT$wcstombs( tmpDll, uniDllStr, size + 1 );
+		
+		if( hash_ascii_string( (BYTE*) tmpDll ) == dllHash )
+			return (HMODULE) pEntry->DllBase;
+	}
+
+	// otherwise:
+	return NULL;
+}
+
+
+
 SIZE_T StringLengthA(LPCSTR String) {
     LPCSTR String2;
 
@@ -223,49 +269,6 @@ int isEDRString(const char* str) {
     return 0;
 }
 
-// Func defn: Normal version of GetModuleHandle
-// This function is equivalent to "loaded_module_base_from_hash" in BokuLoader.c
-HMODULE WINAPI hlpGetModuleHandle(DWORD dllHash) {
-	// get the offset of Process Environment Block
-#ifdef _M_IX86
-	_PEB * ProcEnvBlk = (_PEB *) __readfsdword(0x30);
-#else
-	_PEB * ProcEnvBlk = (_PEB *) __readgsqword(0x60);
-#endif
-
-	// return base address of a calling module
-	if (!dllHash)
-		return (HMODULE) (ProcEnvBlk->lpImageBaseAddress);
-
-	PEB_LDR_DATA * Ldr = ProcEnvBlk->pLdr;
-	LIST_ENTRY * ModuleList = NULL;
-	
-	// Caveat: Create a 'buffer' zone BEFORE using 'hlpGetModuleHandle' (e.g. xLoadLibrary() function)
-	ModuleList = &Ldr->InMemoryOrderModuleList;
-	LIST_ENTRY * pStartListEntry = ModuleList->Flink;
-
-	for (LIST_ENTRY *  pListEntry  = pStartListEntry;  		// start from beginning of InMemoryOrderModuleList
-					   pListEntry != ModuleList;	    	// walk all list entries
-					   pListEntry  = pListEntry->Flink)	{
-		
-		// get current Data Table Entry
-		LDR_DATA_TABLE_ENTRY * pEntry = (LDR_DATA_TABLE_ENTRY *) ((BYTE *) pListEntry - sizeof(LIST_ENTRY));
-
-		// check if module is found and return its base address
-		//if (StringCompareA((const char *) pEntry->BaseDllName.Buffer, (const char *) sModuleName) == 0)
-		//	return (HMODULE) pEntry->DllBase;
-		wchar_t* uniDllStr = (wchar_t*)pEntry->FullDllName.Buffer;
-		size_t size = MSVCRT$wcstombs(NULL,uniDllStr, 0);
-		char* tmpDll = MSVCRT$malloc(size + 1);
-		MSVCRT$wcstombs( tmpDll, uniDllStr, size + 1 );
-		
-		if( hash_ascii_string( (BYTE*) tmpDll ) == dllHash )
-			return (HMODULE) pEntry->DllBase;
-	}
-
-	// otherwise:
-	return NULL;
-}
 
 // OpenSCManagerA's desired access: (if not using the "all-access", I can use bitmasking in here.)
 /*
