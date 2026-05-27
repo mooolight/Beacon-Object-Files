@@ -22,10 +22,10 @@ Link: https://github.com/trustedsec/COFFLoader
 [ImpairingDefenses](#impairingdefenses)  
 [Impact](#impact)  
 
+<img width="633" height="400" alt="giphy" src="https://github.com/user-attachments/assets/a17d302c-b332-4e53-a381-73a78190c9c5" />
 
 </div>
 
-<img width="533" height="400" alt="giphy" src="https://github.com/user-attachments/assets/a17d302c-b332-4e53-a381-73a78190c9c5" />
 
 
 ## Collection
