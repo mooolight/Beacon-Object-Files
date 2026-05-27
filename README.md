@@ -19,7 +19,7 @@
 [ActiveDirectory](#activedirectory)  
 [Persistence](#persistence)  
 [PrivilegeEscalation](#privilegeescalation)  
-[ImpairingDefenses](#impairingdefenses)  
+[ImpairingDefenses](#ImpairingDefenses)  
 [Impact](#impact)  
 
 
