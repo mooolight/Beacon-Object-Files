@@ -19,8 +19,8 @@
 [ActiveDirectory](#activedirectory)  
 [Persistence](#persistence)  
 [PrivilegeEscalation](#privilegeescalation)  
-[Impact](#impact)  
 [ImpairingDefenses](#impairingdefenses)  
+[Impact](#impact)  
 
 
 </div>
