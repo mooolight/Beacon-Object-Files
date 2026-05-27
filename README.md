@@ -93,9 +93,9 @@
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[BlindingEventLog](impairingdefenses/blindingeventlog)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
-| **[EPPFirewallBlock](impairingdefenses/eppfirewallblock)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
-| **[SysmonUnload](impairingdefenses/sysmonunload)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+| **[BlindingEventLog](impairingdefenses/blindingeventlog)**     | Interacting with the Event log service process to suspend logging.|
+| **[EPPFirewallBlock](impairingdefenses/eppfirewallblock)**     | Blocking of Endpoint Protection Telemetry directed to its server via Firewall.|
+| **[SysmonUnload](impairingdefenses/sysmonunload)**     | Unload the sysmon driver disabling endpoint telemetry.|
 
 ## Impact
 
