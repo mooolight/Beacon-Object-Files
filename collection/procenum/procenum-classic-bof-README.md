@@ -28,4 +28,3 @@ Finds the PID of a process name given.
 - .o file
 - Demo .webm/mp4 file PoC
 - Blog post (theory) + Reversing
-- Yara rule
