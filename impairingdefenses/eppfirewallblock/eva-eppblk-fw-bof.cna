@@ -20,19 +20,19 @@ alias eva-eppblk-fw {
         return;
     }
 	if ($ruleGroup eq "") {
-        berror($bid, "Please specify file path to execute with Local Admin privilege.\n");
+        berror($bid, "Please specify rule group to include the rule in.\n");
         return;
     }
 	if ($ruleDescription eq "") {
-        berror($bid, "Please specify file path to execute with Local Admin privilege.\n");
+        berror($bid, "Please specify rule name description providing context for the firewall rule.\n");
         return;
     }
 	if ($ruleApplication eq "") {
-        berror($bid, "Please specify file path to execute with Local Admin privilege.\n");
+        berror($bid, "Please specify rule application that is going to use this firewall rule.\n");
         return;
     }
 	if ($ruleRuleRemoteAddrs eq "") {
-        berror($bid, "Please specify file path to execute with Local Admin privilege.\n");
+        berror($bid, "Please specify the remote IP address that will apply for this firewall rule.\n");
         return;
     }
 	
