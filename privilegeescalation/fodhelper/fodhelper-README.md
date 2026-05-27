@@ -39,4 +39,3 @@ Executes the fodhelper binary privilege escalation technique
 
 # Missing
 - Blog post (theory) + Reversing
-- Yara rule
