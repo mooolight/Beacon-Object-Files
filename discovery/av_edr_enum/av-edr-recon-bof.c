@@ -495,7 +495,6 @@ void go(char *args, int alen) {
 	HANDLE hHeap = KERNEL32$GetProcessHeap();
 	*/
 	
-	// Tip: Encrypt the process list on-disk then decrypt it on runtime
 	// Proclist should be the first argument in here.
 	// This Harcoded string is only used for testing.
 	checkServices();
