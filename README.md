@@ -93,7 +93,9 @@
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[sample](impairingdefenses/sample)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+| **[BlindingEventLog](impairingdefenses/blindingeventlog)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+| **[EPPFirewallBlock](impairingdefenses/eppfirewallblock)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+| **[SysmonUnload](impairingdefenses/sysmonunload)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
 
 ## Impact
 
