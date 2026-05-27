@@ -118,18 +118,6 @@ FARPROC WINAPI hlpGetProcAddress(HMODULE hMod, DWORD apiHash) {
 			//printf("[*] Found the address for %s: %p\n", sTmpFuncName, pProcAddr);
 			//MSVCRT$getchar();
 			
-			// jmp to 'sTmpFuncName'
-			//char patch[14] = { 0 };
-			//CopyMemoryEx(patch + 6, &pProcAddr, 8);
-			//CopyMemoryEx(patch, "\xFF\x25", 2);
-			
-			//printf("After copying - patch: %p\n", patch);
-			//MSVCRT$getchar();
-			
-			// Replace with CopyMemoryEx
-			//CopyMemoryEx( (PVOID) pNtDelayExecution, (const PVOID)patch, sizeof(patch) );
-			//printf("[*] After patching NtDelayExecution: %p\n", pNtDelayExecution);
-			//MSVCRT$getchar();
 			break;
 		}
 	}
