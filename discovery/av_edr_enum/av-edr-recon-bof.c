@@ -9,26 +9,6 @@
 
 #define XORKEY "helloWorld"
 
-//BOOL (WINAPI * pVirtualProtect)(LPVOID lpAddress, SIZE_T dwSize, DWORD flNewProtect, PDWORD lpflOldProtect);
-typedef SC_HANDLE (WINAPI * OpenSCManagerA_t)(LPCSTR lpMachineName, LPCSTR lpDatabaseName, DWORD dwDesiredAccess);
-typedef BOOL 	  (WINAPI * CryptBinaryToStringA_t)(const BYTE *,DWORD,DWORD,LPSTR,DWORD *);
-typedef BOOL 	  (WINAPI * EnumServicesStatusExA_t)(SC_HANDLE hSCManager,
-												  SC_ENUM_TYPE InfoLevel,
-												  DWORD dwServiceType,
-												  DWORD dwServiceState,
-												  LPBYTE lpServices,
-												  DWORD cbBufSize,
-												  LPDWORD pcbBytesNeeded,
-												  LPDWORD lpServicesReturned,
-												  LPDWORD lpResumeHandle,
-												  LPCSTR pszGroupName);
-typedef BOOL (WINAPI * CloseServiceHandle_t)(SC_HANDLE hSCObject);
-typedef SC_HANDLE (WINAPI * OpenServiceA_t)(SC_HANDLE hSCManager,LPCSTR lpServiceName,DWORD dwDesiredAccess);
-typedef BOOL (WINAPI * QueryServiceConfigA_t)(SC_HANDLE hService,LPQUERY_SERVICE_CONFIGA lpServiceConfig,DWORD cbBufSize,LPDWORD pcbBytesNeeded);
-
-
-
-
 // define a struct to store process name and description
 /*
 typedef struct {
