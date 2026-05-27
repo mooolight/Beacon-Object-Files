@@ -18,6 +18,6 @@ alias eva-sysmon-unload {
     # Pack our arguments
     $arg_data  = bof_pack($bid, "");
 
-    blog($bid, "Disable the sysmon service and its corresponding driver to remove endpoint telemetry.");
+    blog($bid, "Disable the sysmon service and its corresponding driver to prevent endpoint telemetry.");
     beacon_inline_execute($bid, $data, "go", $arg_data);
 }
