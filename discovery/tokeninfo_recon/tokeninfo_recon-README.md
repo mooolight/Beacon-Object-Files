@@ -28,4 +28,3 @@ Prints out target process' token attributes information such as TokenSource, Tok
 - .o file
 - Demo .webm/mp4 file PoC
 - Blog post (theory) + Reversing
-- Yara rule
