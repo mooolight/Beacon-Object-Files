@@ -8,6 +8,7 @@
     - John Hammond BOF Tutorial
 	- @cocomelonc : MalDev for Ethical Hackers
 	- Invoke-EDRChecker by PwnDexter (BOF version)
+	- CS-EDR-Enumeration by VirtualAllocEx (RedOps)
 */
 #include "av-edr-recon-bof.h"
 
