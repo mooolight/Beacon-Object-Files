@@ -1,5 +1,5 @@
 # byovd-rtcore64-exploit
-Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.
+Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory by exploiting the RTCore64.sys vulnerable driver.
 
 > This operation requires LOCAL admin privileges.
 
