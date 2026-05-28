@@ -19,6 +19,7 @@ Link: https://github.com/trustedsec/COFFLoader
 [ActiveDirectory](#activedirectory)  
 [Persistence](#persistence)  
 [PrivilegeEscalation](#privilegeescalation)  
+[MalwareDelivery](#malwaredelivery)  
 [ImpairingDefenses](#impairingdefenses)  
 [Impact](#impact)  
 
@@ -90,6 +91,13 @@ Link: https://github.com/trustedsec/COFFLoader
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **[fodhelper](privilegeescalation/fodhelper/)**     | The “fodhelper UAC bypass” is a well-known Windows privilege-escalation technique that abuses the auto-elevated Microsoft binary fodhelper.exe to bypass normal User Account Control (UAC) prompts.|
+
+## Malware Delivery
+
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[dns](malwaredelivery/dns/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+
 
 
 ## Impairing Defenses
