@@ -63,11 +63,11 @@ Link: https://github.com/trustedsec/COFFLoader
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[elevate2system](byovd/rtcore/elevate2system)**     | Copy the token of the System.exe process' NT AUTHORITY\SYSTEM and transferring it to the target process by exploiting the vulnerable RTCore64.sys.|
-| **[settokenhighprivs](byovd/rtcore/settokenhighprivs)**     | Setting all the privileges of a target process to '1' by exploiting the vulnerable RTCore64.sys.|
-| **[setintegritylevel](byovd/rtcore/setintegritylevel)**     | Elevate the integrity of the target process to NT AUTHORITY\SYSTEM by exploiting the vulnerable RTCore64.sys.|
-| **[unrestricttoken](byovd/rtcore/unrestricttoken)**     | Allows access of the target process to any objects in the system usually proceeded by an "access denied" by exploiting the vulnerable RTCore64.sys.|
-| **[flipprocprotection](byovd/rtcore/flipprocprotection)**     | Flip the protection of the target process to Fully Protected Process or Process Protected Light by exploiting the vulnerable RTCore64.sys.|
+| **[rtcore-elevate2system](byovd/rtcore/elevate2system)**     | Copy the token of the System.exe process' NT AUTHORITY\SYSTEM and transferring it to the target process by exploiting the vulnerable RTCore64.sys.|
+| **[rtcore-settokenhighprivs](byovd/rtcore/settokenhighprivs)**     | Setting all the privileges of a target process to '1' by exploiting the vulnerable RTCore64.sys.|
+| **[rtcore-setintegritylevel](byovd/rtcore/setintegritylevel)**     | Elevate the integrity of the target process to NT AUTHORITY\SYSTEM by exploiting the vulnerable RTCore64.sys.|
+| **[rtcore-unrestricttoken](byovd/rtcore/unrestricttoken)**     | Allows access of the target process to any objects in the system usually proceeded by an "access denied" by exploiting the vulnerable RTCore64.sys.|
+| **[rtcore-flipprocprotection](byovd/rtcore/flipprocprotection)**     | Flip the protection of the target process to Fully Protected Process or Process Protected Light by exploiting the vulnerable RTCore64.sys.|
 
 
 
