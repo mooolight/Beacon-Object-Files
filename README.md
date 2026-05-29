@@ -63,7 +63,14 @@ Link: https://github.com/trustedsec/COFFLoader
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[RTCore](byovd/rtcore/)**     | Capabilities not limited to elevating the target process' token similar to SYSTEM through modification of kernel memory by exploiting the RTCore64.sys vulnerable driver.|
+| **[RTCore](byovd/rtcore/elevate2system)**     | Copy the token of the System.exe process' NT AUTHORITY\SYSTEM and transferring it to the target process by exploiting the vulnerable RTCore64.sys.|
+| **[RTCore](byovd/rtcore/settokenhighprivs)**     | Setting all the privileges of a target process to '1' by exploiting the vulnerable RTCore64.sys.|
+| **[RTCore](byovd/rtcore/setintegritylevel)**     | Elevate the integrity of the target process to NT AUTHORITY\SYSTEM by exploiting the vulnerable RTCore64.sys.|
+| **[RTCore](byovd/rtcore/unrestricttoken)**     | Allows access of the target process to any objects in the system usually proceeded by an "access denied" by exploiting the vulnerable RTCore64.sys.|
+| **[RTCore](byovd/rtcore/flipprocprotection)**     | Flip the protection of the target process to Fully Protected Process or Process Protected Light by exploiting the vulnerable RTCore64.sys.|
+
+
+
 
 
 ## Process Injection
