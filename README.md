@@ -4,11 +4,11 @@
 - I have used COFFLoader from TrustedSec for local BOF testing.  
 Link: https://github.com/trustedsec/COFFLoader  
 
-Protections disabled during testing (as of now):  
+Protections enabled during testing (as of now):  
 - Compiler's Stack Buffer Overrun protection  
-  > Stack Cookie [X]
-  > ASLR [/]
-  > NX/DEP [/]
+  > Stack Cookie [X]  
+  > ASLR [/]  
+  > NX/DEP [/]  
 - Control Flow Guard (CFG)
 
 <div align='center'>
