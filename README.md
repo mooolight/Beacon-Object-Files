@@ -5,7 +5,10 @@
 Link: https://github.com/trustedsec/COFFLoader  
 
 Protections disabled during testing (as of now):  
-- Compiler's Stack Buffer Overrun protection
+- Compiler's Stack Buffer Overrun protection  
+  > Stack Cookie [X]
+  > ASLR [/]
+  > NX/DEP [/]
 - Control Flow Guard (CFG)
 
 <div align='center'>
