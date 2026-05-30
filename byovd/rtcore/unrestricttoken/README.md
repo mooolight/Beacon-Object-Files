@@ -4,7 +4,7 @@ Allows access of the target process to any objects in the system usually proceed
 > This operation requires LOCAL admin privileges.
 
 <div align='center'>
-https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGRnZDgwZXB2cHkzenRveTU4bTBpamI0c3FiOWNyaGduajN4a3o1cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XNYGrAFRIlNzpFJs44/giphy.gif
+<img width="480" height="264" alt="giphy" src="https://github.com/user-attachments/assets/6ee3466b-f688-4483-a0ab-1ea3377f8344" />
 </div>
 
 ## Arguments
