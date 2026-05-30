@@ -3,7 +3,9 @@ Copy the token of the System.exe process' NT AUTHORITY\SYSTEM and transferring i
 
 > This operation requires LOCAL admin privileges.
 
-<img width="480" height="268" alt="giphy" src="https://github.com/user-attachments/assets/ecd13bb2-cedb-4b78-b3f0-5ad0f08507d1" />
+<div align='center'>
+<img width="650" height="350" alt="giphy" src="https://github.com/user-attachments/assets/ecd13bb2-cedb-4b78-b3f0-5ad0f08507d1" />
+</div>
 
 ## Arguments
 `<targetPid>` : the target PID to modify the token configuration.
