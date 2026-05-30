@@ -3,10 +3,6 @@ Capabilities not limited to elevating the target process' token similar to SYSTE
 
 > This operation requires LOCAL admin privileges.
 
-<div align='center'>
-<img width="650" height="400" alt="giphy" src="https://github.com/user-attachments/assets/3b539e4c-87cc-40fb-b95b-2ec1276aebaa" />
-</div>
-
 ## Arguments
 `<actions>` : choose on the following - unrestricttoken | setintegritylevel | settokenhighprivs | elevate2system | flipprocprotection | etwdisable | callbacks  
 `<targetPid>` : the target PID to modify the token configuration.  
