@@ -4,8 +4,8 @@ Setting all the privileges of a target process to '1' by exploiting the vulnerab
 > This operation requires LOCAL admin privileges.
 
 ## Arguments
-`<targetProc>` : the target PID to modify the token configuration.
-`<pers>` : status whether the service will persist or not.
+`<targetProc>` : the target PID to modify the token configuration.  
+`<pers>` : status whether the service will persist or not.  
 
 ## Usage - How to not use a param? How to use different param on a different obj
 * `byovd-rtcore64-tokenconf-settokenhighprivs <targetProc> <pers>`
