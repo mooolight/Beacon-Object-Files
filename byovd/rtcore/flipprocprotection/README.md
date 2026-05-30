@@ -3,6 +3,10 @@ Flip the protection of the target process to Fully Protected Process or Process 
 
 > This operation requires LOCAL admin privileges.
 
+<div align='center'>
+<img width="556" height="400" alt="200" src="https://github.com/user-attachments/assets/3b5a0539-d370-4ed1-9ca1-040ffeb381eb" />
+</div>
+
 ## Arguments
 `<targetProc>` : the target PID to modify the token configuration.  
 `<prot_type>` : When flipping the process protection , choose whether to flip to Process Protection Light or Process Protection.[<pers>]: Status whether the exploited service will persist or not.  
