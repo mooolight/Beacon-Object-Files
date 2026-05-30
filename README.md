@@ -6,9 +6,7 @@ Link: https://github.com/trustedsec/COFFLoader
 
 Protections enabled during testing (as of now):  
 - Compiler's Stack Buffer Overrun protection  
-  > Stack Cookie [X]  
-  > ASLR [/]  
-  > NX/DEP [/]  
+  > '/GS-'  
 - Control Flow Guard (CFG)
 
 <div align='center'>
