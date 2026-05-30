@@ -3,6 +3,10 @@ Setting all the privileges of a target process to '1' by exploiting the vulnerab
 
 > This operation requires LOCAL admin privileges.
 
+<div align='center'>
+<img width="480" height="270" alt="giphy" src="https://github.com/user-attachments/assets/75453efd-8848-4b77-bb84-23fbbfae3e74" />
+</div>
+
 ## Arguments
 `<targetProc>` : the target PID to modify the token configuration.  
 `<pers>` : status whether the service will persist or not.  
