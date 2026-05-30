@@ -2,8 +2,11 @@
 
 ## Tool for Testing
 - I have used COFFLoader from TrustedSec for local BOF testing.  
-Link: https://github.com/trustedsec/COFFLoader
+Link: https://github.com/trustedsec/COFFLoader  
 
+Protections disabled during testing (as of now):  
+- Compiler's Stack Buffer Overrun protection
+- Control Flow Guard (CFG)
 
 <div align='center'>
 
