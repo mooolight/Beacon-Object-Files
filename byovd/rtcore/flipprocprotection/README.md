@@ -4,7 +4,7 @@ Flip the protection of the target process to Fully Protected Process or Process 
 > This operation requires LOCAL admin privileges.
 
 <div align='center'>
-<img width="556" height="400" alt="200" src="https://github.com/user-attachments/assets/3b5a0539-d370-4ed1-9ca1-040ffeb381eb" />
+<img width="756" height="400" alt="200" src="https://github.com/user-attachments/assets/3b5a0539-d370-4ed1-9ca1-040ffeb381eb" />
 </div>
 
 ## Arguments
