@@ -1,11 +1,11 @@
 # byovd-rtcore64-tokenconf-unrestricttoken
-Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.
+Allows access of the target process to any objects in the system usually proceeded by an "access denied" due to SID restriction by exploiting the vulnerable RTCore64.sys.  
 
 > This operation requires LOCAL admin privileges.
 
 ## Arguments
-`<targetProc>` : the target PID to modify the token configuration.
-`<pers>` : status whether the service will persist or not.
+`<targetProc>` : the target PID to modify the token configuration.  
+`<pers>` : status whether the service will persist or not.  
 
 ## Usage - How to not use a param? How to use different param on a different obj
 * `byovd-rtcore64-tokenconf-unrestricttoken <targetProc> <pers>`
