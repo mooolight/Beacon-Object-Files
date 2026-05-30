@@ -4,9 +4,9 @@ Flip the protection of the target process to Fully Protected Process or Process 
 > This operation requires LOCAL admin privileges.
 
 ## Arguments
-`<targetProc>` : the target PID to modify the token configuration.
-`<prot_type>` : When flipping the process protection , choose whether to flip to Process Protection Light or Process Protection.[<pers>]: Status whether the exploited service will persist or not.
-`<pers>` : status whether the service will persist or not.
+`<targetProc>` : the target PID to modify the token configuration.  
+`<prot_type>` : When flipping the process protection , choose whether to flip to Process Protection Light or Process Protection.[<pers>]: Status whether the exploited service will persist or not.  
+`<pers>` : status whether the service will persist or not.  
 
 ## Usage
 * `byovd-rtcore64-tokenconf-flipprocprotection <targetProc> <ppl | pp> <pers>`
