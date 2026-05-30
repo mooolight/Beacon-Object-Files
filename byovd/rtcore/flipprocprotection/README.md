@@ -3,7 +3,9 @@ Flip the protection of the target process to Fully Protected Process or Process 
 
 > This operation requires LOCAL admin privileges.
 
-
+<div align='center'>
+<img width="752" height="200" alt="400" src="https://github.com/user-attachments/assets/4862c025-3ae1-4863-9896-b951022ea2c9" />
+</div>
 
 ## Arguments
 `<targetProc>` : the target PID to modify the token configuration.  
