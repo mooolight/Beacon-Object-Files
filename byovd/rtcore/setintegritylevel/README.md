@@ -1,5 +1,5 @@
 # byovd-rtcore64-tokenconf-setintegritylevel
-Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.
+Elevate the integrity of the target process to NT AUTHORITY\SYSTEM by exploiting the vulnerable RTCore64.sys.  
 
 > This operation requires LOCAL admin privileges.
 
