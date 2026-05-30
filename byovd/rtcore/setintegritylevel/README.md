@@ -4,8 +4,8 @@ Elevate the integrity of the target process to NT AUTHORITY\SYSTEM by exploiting
 > This operation requires LOCAL admin privileges.
 
 ## Arguments
-`<targetProc>` : the target PID to modify the token configuration.
-`<pers>` : status whether the service will persist or not.
+`<targetProc>` : the target PID to modify the token configuration.  
+`<pers>` : status whether the service will persist or not.  
 
 ## Usage - How to not use a param? How to use different param on a different obj
 * `byovd-rtcore64-tokenconf-setintegritylevel <targetProc> <pers>`
