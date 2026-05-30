@@ -1,5 +1,5 @@
 # byovd-rtcore64-tokenconf-settokenhighprivs
-Capabilities not limited to elevating the target process' token similar to SYSTEM.exe through modification of kernel memory with the help of the RTCore64.sys vulnerable driver.
+Setting all the privileges of a target process to '1' by exploiting the vulnerable RTCore64.sys.  
 
 > This operation requires LOCAL admin privileges.
 
