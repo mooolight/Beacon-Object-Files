@@ -118,6 +118,7 @@ Protections enabled during testing (as of now):
 | **[BlindingEventLog](impairingdefenses/blindingeventlog)**     | Interacting with the Event log service process to suspend logging.|
 | **[EPPFirewallBlock](impairingdefenses/eppfirewallblock)**     | Blocking of Endpoint Protection Telemetry directed to its server via Firewall.|
 | **[SysmonUnload](impairingdefenses/sysmonunload)**     | Unload the sysmon driver disabling endpoint telemetry.|
+| **[windef-disable](impairingdefenses/windef-disable)**     | Disabling Windows Defender via Registry modification.|
 
 ## Impact
 
