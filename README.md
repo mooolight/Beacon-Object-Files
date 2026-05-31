@@ -107,7 +107,7 @@ Protections enabled during testing (as of now):
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[dns-ptr](malwaredelivery/dns-ptr/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+| **[dns-ptr](malwaredelivery/dns-ptr/)**     | Deliver malware into the target process' memory block via DNS resolution's PTR record(s).|
 
 
 
