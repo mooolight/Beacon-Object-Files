@@ -9,10 +9,8 @@ Protections enabled during testing (as of now):
   > '/GS-'  
 - Control Flow Guard (CFG)
 
-<div align='center'>
-
 ## Table of Contents
-
+<div align='center'>
 [Collection](#collection)  
 [Credential Access](#credential-access)  
 [Discovery](#discovery)  
