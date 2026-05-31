@@ -1,7 +1,4 @@
 /*
- // TODO: Use function obfuscation on FilterLoad API
- // TODO: Use function obfuscation on FilterUnload API
- 
  Red Team Operator course code template
  Sysmon minifilter unload
  
