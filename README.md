@@ -45,7 +45,7 @@ Protections enabled during testing (as of now):
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[cookiecrunch](credentialaccess/cookiecrunch/)**     | Scans the 'msedge.exe' process' readable memory regions and extracts all information related to URL, username and passwords.|
+| **[cookiecrunch](credentialaccess/cookiecrunch/)**     | Test Test Test Test Test Test Test .|
 
 
 ## Discovery
