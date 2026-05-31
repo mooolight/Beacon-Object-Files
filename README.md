@@ -77,14 +77,14 @@ Protections enabled during testing (as of now):
 
 
 
-## Process Injection
+## ProcessInjection
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **[processinjection](processinjection/procinj-sectionmaps/)**     | Executes the classic process injection technique through section maps.|
 
 
-## Active Directory
+## ActiveDirectory
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
