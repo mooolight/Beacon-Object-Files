@@ -11,6 +11,7 @@ Protections enabled during testing (as of now):
 
 ## Table of Contents
 <div align='center'>
+
 [Collection](#collection)  
 [Credential Access](#credential-access)  
 [Discovery](#discovery)  
