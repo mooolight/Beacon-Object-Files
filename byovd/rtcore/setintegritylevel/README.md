@@ -28,3 +28,11 @@ Elevate the integrity of the target process to NT AUTHORITY\SYSTEM by exploiting
 - 2\. Open the `x64 Native Tools Command Prompt for VS <2019/2022>` terminal.
 - 3\. Run the `bofcompile.bat` script to compile the object file. 
 - 4\. In Cobalt strike, use the script manager to load the .cna script to import the tool.  // how to use Aggressor script in Powershell Empire?
+
+## LitterBox Testing
+
+### Static Analysis
+
+
+### Dynamic Analysis
+
