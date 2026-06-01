@@ -44,7 +44,7 @@ Protections enabled during testing (as of now):
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[cookiecrunch](credentialaccess/cookiecrunch/)**     | Extracts cookies for commonly used browsers.|
+| **[cookiecrunch](credentialaccess/cookiecrunch/)**     | Extract cookies for commonly used browsers.|
 | **[edgelord](credentialaccess/edgelord/)**     | Scans msedge.exe's process and extract useful information not limited to passwords, username, url ,etc.|
 
 
