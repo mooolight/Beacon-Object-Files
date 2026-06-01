@@ -28,3 +28,12 @@ Executes the ransomware simulation on a proof of concept file with Access Contro
 - .o file
 - Demo .webm/mp4 file PoC
 - Blog post (theory) + Reversing
+
+
+## LitterBox Testing
+
+### Static Analysis
+
+
+### Dynamic Analysis
+
