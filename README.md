@@ -89,7 +89,7 @@ Protections enabled during testing (as of now):
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[dpapi-regsearch](persistence/dpapi-regsearch/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+| **[dpapi-regsearch](persistence/dpapi-regsearch/)**     | Find artifacts related to DPAPI blob in the Windows Registry.|
 
 
 ## Persistence
