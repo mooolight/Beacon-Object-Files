@@ -61,7 +61,7 @@ Protections enabled during testing (as of now):
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[warbird](execution/warbird/)**     | Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test .|
+| **[warbird](execution/warbird/)**     | Execution technique via Windows built-in obfuscation mechanism.|
 
 
 ## BYOVD
