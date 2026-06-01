@@ -31,3 +31,12 @@ Executes the classic process injection technique through section maps.
 - .o file
 - Demo .webm/mp4 file PoC
 - Blog post (theory) + Reversing
+
+
+## LitterBox Testing
+
+### Static Analysis
+
+
+### Dynamic Analysis
+
