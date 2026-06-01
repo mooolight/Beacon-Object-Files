@@ -15,6 +15,10 @@ Flip the protection of the target process to Fully Protected Process or Process 
 ## Usage
 * `byovd-rtcore64-tokenconf-flipprocprotection <targetProc> <ppl | pp> <pers>`
 
+
+## Demonstration
+
+
 ## Example
 * `byovd-rtcore64-tokenconf-flipprocprotection <lsass|csrss>.exe ppl FALSE`
 
