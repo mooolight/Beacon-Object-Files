@@ -8,8 +8,8 @@ Copy the token of the System.exe process' NT AUTHORITY\SYSTEM and transferring i
 </div>
 
 ## Arguments
-`<targetPid>` : the target PID to modify the token configuration.
-`<pers>` : status whether the service will persist or not.
+`<targetPid>` : the target PID to modify the token configuration.  
+`<pers>` : status whether the service will persist or not.  
 
 ## Usage - How to not use a param? How to use different param on a different obj
 * `byovd-rtcore64-exploit-elevate2system <targetPid> <pers>`
