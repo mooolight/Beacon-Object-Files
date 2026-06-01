@@ -14,6 +14,10 @@ Setting all the privileges of a target process to '1' by exploiting the vulnerab
 ## Usage - How to not use a param? How to use different param on a different obj
 * `byovd-rtcore64-tokenconf-settokenhighprivs <targetProc> <pers>`
 
+
+## Demonstration
+
+
 ## Example
 * `byovd-rtcore64-tokenconf-settokenhighprivs 4928 FALSE`
 
