@@ -5,7 +5,7 @@
    - Heavily dependent on code by reenz0h (twitter: @SEKTOR7net) => Red Team Operator course code template Classic Process enumeration
 
 */
-#include "procenum-classic.h"
+#include "procenum-classic-imports.h"
 
 int FindTarget(const char *procname) {
 	HANDLE hProcSnap;
