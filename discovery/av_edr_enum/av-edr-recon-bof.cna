@@ -1,0 +1,29 @@
+# author @mooolight
+
+beacon_command_register(
+	"av-edr-recon", "Gather information about existing AV/EDR solutions in the machine.",
+	"INFO:\nGather information about existing AV/EDR solutions in the machine.\n\n".
+	"ARGUMENTS:\n[<procList>]: Text file containing the list of processes of known defensive solutions with the format of <procName>|<description>.\n".
+	"USAGE:\nav-edr-recon <procList>\n\n".
+	"EXAMPLES:\nav-edr-recon C:\\Path\\to\\file\\..\\processes.txt\n\n");
+
+alias av-edr-recon {
+    $bid = $1;
+	$procList = $2;
+	
+    if ($procList eq "") {
+        berror($bid, "Please specify the full path to the file containing the list of target processes.\n");
+        return;
+    }
+	
+    # Read in the right BOF file
+    $handle = openf(script_resource("av-edr-recon-bof.o"));
+    $data   = readb($handle, -1);
+    closef($handle);
+
+    # Pack our arguments
+    $arg_data  = bof_pack($bid, "z", $procList);
+	
+    blog($bid, "Defensive solutions information gathering..");
+    beacon_inline_execute($bid, $data, "go", $arg_data);
+}
