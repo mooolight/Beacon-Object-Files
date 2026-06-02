@@ -1,6 +1,10 @@
 #pragma once
 
 #ifdef BOF
+
+#include "..\beacon.h"
+#include "..\bofdefs.h"
+
 	// Kernel32
 	DECLSPEC_IMPORT HANDLE  WINAPI KERNEL32$CreateFileA(LPCSTR ,DWORD ,DWORD ,LPSECURITY_ATTRIBUTES ,DWORD ,DWORD , HANDLE);
 	#define CreateFileA KERNEL32$CreateFileA
@@ -44,4 +48,11 @@
 	#define strcpy MSVCRT$strcpy
 	WINBASEAPI size_t __cdecl MSVCRT$strlen(const char *);
 	#define strlen MSVCRT$strlen
+
+#define PRINT(...)  BeaconPrintf(CALLBACK_OUTPUT, __VA_ARGS__)
+
+#else
+
+#define PRINT(...)  printf(__VA_ARGS__);
+
 #endif
