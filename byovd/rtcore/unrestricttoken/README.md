@@ -49,6 +49,14 @@ Allows access of the target process to any objects in the system usually proceed
 
 <img width="1351" height="580" alt="Pasted image 20260531232534" src="https://github.com/user-attachments/assets/a1c64b2a-8bd0-4c78-8a08-6889490d29f8" />  
 
+<img width="1590" height="453" alt="4" src="https://github.com/user-attachments/assets/9e5a578d-0252-43a8-83d4-8a28d5a228d0" />
+
+<img width="1590" height="474" alt="3" src="https://github.com/user-attachments/assets/2c7b8473-eb65-4e27-b897-3c7cde1ea1d6" />
+
+<img width="1589" height="466" alt="2" src="https://github.com/user-attachments/assets/238dedc9-0290-4fa1-9c78-af58a80d1569" />
+
+<img width="596" height="331" alt="1" src="https://github.com/user-attachments/assets/5d8a555c-d8af-4f2c-b552-5742061aed0d" />
+
 
 ### Dynamic Analysis
 
