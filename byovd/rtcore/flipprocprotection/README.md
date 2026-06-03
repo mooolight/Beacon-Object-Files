@@ -47,13 +47,13 @@ Flip the protection of the target process to Fully Protected Process or Process 
 
 <img width="1587" height="427" alt="4" src="https://github.com/user-attachments/assets/2e0607f3-a496-4b92-9d9c-1a345c7296ca" />
 
-<img width="1396" height="447" alt="5" src="https://github.com/user-attachments/assets/4a7d039e-f130-41cb-bab7-cf3ab70f95be" />
-
-<img width="1392" height="645" alt="6" src="https://github.com/user-attachments/assets/fe43dc05-604f-4868-89aa-e011150e4d8f" />
+<img width="1391" height="638" alt="8" src="https://github.com/user-attachments/assets/af82ca04-765c-4900-af1f-2689eb266abd" />
 
 <img width="1390" height="588" alt="7" src="https://github.com/user-attachments/assets/fa53b6a4-161d-4e12-ac04-a9461987574a" />
 
-<img width="1391" height="638" alt="8" src="https://github.com/user-attachments/assets/af82ca04-765c-4900-af1f-2689eb266abd" />
+<img width="1392" height="645" alt="6" src="https://github.com/user-attachments/assets/fe43dc05-604f-4868-89aa-e011150e4d8f" />
+
+<img width="1396" height="447" alt="5" src="https://github.com/user-attachments/assets/4a7d039e-f130-41cb-bab7-cf3ab70f95be" />
 
 
 ### Dynamic Analysis
