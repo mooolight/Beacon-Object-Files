@@ -37,5 +37,21 @@ Setting all the privileges of a target process to '1' by exploiting the vulnerab
 
 ### Static Analysis
 
+<img width="1398" height="636" alt="1" src="https://github.com/user-attachments/assets/e809694b-e1a8-4b58-89ac-7d27cd08cb14" />
+
+<img width="1399" height="642" alt="2" src="https://github.com/user-attachments/assets/fd46d3aa-8433-48e6-b4e9-13fd924127f9" />
+
+<img width="1397" height="593" alt="3" src="https://github.com/user-attachments/assets/c037fda1-8ca5-4293-bf50-95b50a2eaedb" />
+
+<img width="1395" height="257" alt="4" src="https://github.com/user-attachments/assets/b29a72fc-f47d-486d-a28a-e0baf10d70a4" />
+
+<img width="1389" height="436" alt="5" src="https://github.com/user-attachments/assets/c2dff627-8b92-4569-8ae4-a29ae3fdaab0" />
+
+<img width="1100" height="471" alt="6" src="https://github.com/user-attachments/assets/6cce7e2b-86a9-4bea-8401-b064d17ae232" />
+
+<img width="1044" height="479" alt="7" src="https://github.com/user-attachments/assets/a8fe6471-a1c6-46f3-85ff-5a1fbbe138f6" />
+
+<img width="615" height="337" alt="8" src="https://github.com/user-attachments/assets/b9e41c73-d757-4590-9e96-8da5d2c278bb" />
+
 
 ### Dynamic Analysis
