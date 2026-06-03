@@ -283,7 +283,7 @@ Cleanup:
     if (SUCCEEDED(hrComInit)) {
         CoUninitialize();
     }
-    return;
+    return 0;
 }
 
 #endif
