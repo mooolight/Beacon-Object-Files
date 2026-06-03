@@ -45,6 +45,14 @@ Copy the token of the System.exe process' NT AUTHORITY\SYSTEM and transferring i
 
 <img width="1398" height="545" alt="Pasted image 20260602185410" src="https://github.com/user-attachments/assets/a6bc90f6-ef6b-4ebe-95f6-1e1eb404cfdf" />
 
+<img width="1189" height="439" alt="1" src="https://github.com/user-attachments/assets/c93ed220-3af2-4c35-9d79-31a2561b420d" />
+
+<img width="1046" height="482" alt="2" src="https://github.com/user-attachments/assets/6f05486a-aa88-4281-bd4e-776680c6f962" />
+
+<img width="1059" height="487" alt="3" src="https://github.com/user-attachments/assets/f91f20a9-3ba7-4df9-a047-65382d65c1f7" />
+
+<img width="601" height="375" alt="4" src="https://github.com/user-attachments/assets/e6ffc2e7-77d1-4739-b7ac-72ddd754ff73" />
+
 
 ### Dynamic Analysis
 
