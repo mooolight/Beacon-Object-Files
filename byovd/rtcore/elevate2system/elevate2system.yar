@@ -5,7 +5,7 @@ import "pe"
     meta:
 		last_updated = "2026-06-03"
 		author = "mooolight"
-		description = "Yara rule for executing BYOVD attack to elevate the privilege of a target process."
+		description = "Yara rule for executing BYOVD attack to elevate the privilege of a target process to SYSTEM."
 
     strings:
 		$file_type = {4D 5A}
