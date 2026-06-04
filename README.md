@@ -122,6 +122,13 @@ Protections enabled during testing (as of now):
 | **[SysmonUnload](impairingdefenses/sysmonunload)**     | Unload the sysmon driver disabling endpoint telemetry.|
 | **[windef-disable](impairingdefenses/windef-disable)**     | Disabling Windows Defender via Registry modification.|
 
+## DataExFiltration
+
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[test](dataexfiltration/)**     | Test Test Test Test Test Test Test .|
+
+
 ## Impact
 
 | **BOF**                  | **Use**                                                                                                                                                         |
