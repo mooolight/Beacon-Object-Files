@@ -45,6 +45,20 @@ Executes the fodhelper binary privilege escalation technique
 
 ### Static Analysis
 
+<img width="1395" height="639" alt="1" src="https://github.com/user-attachments/assets/25874987-e223-48af-a429-edd427838667" />  
+
+<img width="1396" height="660" alt="2" src="https://github.com/user-attachments/assets/eba57bca-0d48-4c4d-aeb7-753ad5107f2f" />  
+
+<img width="1394" height="293" alt="3" src="https://github.com/user-attachments/assets/7cbe70da-16f4-4f87-8473-f0f66a2f272c" />  
+
+<img width="1485" height="419" alt="4" src="https://github.com/user-attachments/assets/02998020-58d0-4b05-858b-c3d2ac1c9afb" />  
+
+<img width="1491" height="456" alt="5" src="https://github.com/user-attachments/assets/6df33b68-6856-4bc4-bfc0-ca0e2c75846c" />  
+
+<img width="1486" height="475" alt="6" src="https://github.com/user-attachments/assets/1c2f91b8-8446-4950-947a-9b66cd89ab50" />  
+
+<img width="583" height="320" alt="7" src="https://github.com/user-attachments/assets/00fb2daa-d853-4add-b5fb-fe8412ecf5e0" />  
+
 
 ### Dynamic Analysis
 
