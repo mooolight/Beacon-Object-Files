@@ -56,3 +56,6 @@ Copy the token of the System.exe process' NT AUTHORITY\SYSTEM and transferring i
 
 ### Dynamic Analysis
 
+
+## Missing
+- Yara rule
