@@ -48,6 +48,14 @@ Executes the classic process injection technique through section maps.
 
 <img width="1394" height="257" alt="4" src="https://github.com/user-attachments/assets/cde6d34f-5ca0-4636-8d03-258997afe9fb" />  
 
+<img width="1438" height="433" alt="5" src="https://github.com/user-attachments/assets/7d13d6e5-0da7-4fff-a613-63e21422ebf7" />  
+
+<img width="1256" height="473" alt="6" src="https://github.com/user-attachments/assets/6e6dd9b3-f672-463b-9929-517a55b5ae8b" />  
+
+<img width="1036" height="462" alt="7" src="https://github.com/user-attachments/assets/a08e0072-e017-4fd5-846a-a3256ad0768f" />  
+
+<img width="597" height="373" alt="8" src="https://github.com/user-attachments/assets/9c8d98e0-33c2-4ab5-9384-0e8508ef6535" />  
+
 
 ### Dynamic Analysis
 
