@@ -24,7 +24,7 @@ Protections enabled during testing (as of now):
 [PrivilegeEscalation](#privilegeescalation)  
 [MalwareDelivery](#malwaredelivery)  
 [ImpairingDefenses](#impairingdefenses)  
-[DataExfiltration](#dataexfiltration)
+[DataExfiltration](#dataexfiltration)  
 [Impact](#impact)  
 
 <img width="633" height="350" alt="giphy" src="https://github.com/user-attachments/assets/a17d302c-b332-4e53-a381-73a78190c9c5" />
