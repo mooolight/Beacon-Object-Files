@@ -30,7 +30,7 @@ rule detect_procinj_sect_maps {
         (hash.sha256(0,filesize) == "2b77bd8b28ee36e9344e93b63a98adf9137bab2cdb1107637c558a0881ec33ff") and
 
         // File size : ~10k bytes
-        filesize >= 142KB and
+        filesize <= 142KB and
 
         // Machine architecture
         (pe.machine == pe.MACHINE_AMD64)
