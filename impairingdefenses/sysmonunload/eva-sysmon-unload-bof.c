@@ -113,15 +113,15 @@ int main() {
 	unsigned char sFilterLoad[] = { 'F','i','l','t','e','r','L','o','a','d', 0x00 }; 			
 	unsigned char sFilterUnload[] = { 'F','i','l','t','e','r','U','n','l','o','a','d', 0x00 };  
 	char * lib = "F";
-	MSVCRT$strcat(lib,"l");
-	MSVCRT$strcat(lib,"t");
-	MSVCRT$strcat(lib,"L");
-	MSVCRT$strcat(lib,"i");
-	MSVCRT$strcat(lib,"b");
-	MSVCRT$strcat(lib,".");
-	MSVCRT$strcat(lib,"d");
-	MSVCRT$strcat(lib,"l");
-	MSVCRT$strcat(lib,"l");
+	strcat(lib,"l");
+	strcat(lib,"t");
+	strcat(lib,"L");
+	strcat(lib,"i");
+	strcat(lib,"b");
+	strcat(lib,".");
+	strcat(lib,"d");
+	strcat(lib,"l");
+	strcat(lib,"l");
 	FilterLoad_t pFilterLoad 		= GetProcAddress(GetModuleHandle(lib), sFilterLoad);
 	FilterUnload_t pFilterUnload 	= GetProcAddress(GetModuleHandle(lib), sFilterUnload);
 
