@@ -5,7 +5,7 @@ rule detect_windef_disable {
     meta:
 		last_updated = "2026-06-04"
 		author = "mooolight"
-		description = "Yara rule for disabling Windows Defender through registry value tampering."
+		description = "Yara rule for disabling Windows Defender through registry key/subkey tampering."
 
 	strings:
 		$file_type = {4D 5A}
