@@ -1,4 +1,4 @@
-# pers-sethc
+# pers-runkeys
 Executes the runkeys persistence technique
 
 > This operation requires elevated privileges.
