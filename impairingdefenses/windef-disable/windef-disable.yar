@@ -35,7 +35,7 @@ rule detect_windef_disable {
         (hash.sha256(0,filesize) == "f3dd21ae0dc312092ca74c1ed5dbccbd4cbb2b8c40faceb93019c489e51edab2") and
 
         // File size : ~10k bytes
-        filesize >= 140KB and
+        filesize <= 140KB and
 
         // Machine architecture
         (pe.machine == pe.MACHINE_AMD64)
