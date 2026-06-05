@@ -5,4 +5,3 @@
 
 #pragma comment (lib, "kernel32")
 #pragma comment (lib, "advapi32")
-#pragma comment (lib, "msvcrt")
