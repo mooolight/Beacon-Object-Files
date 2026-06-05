@@ -29,7 +29,7 @@ void DeleteRegKeys(){
 // Usage: pers-runkeys <evilFullPath> <>
 void go(char *args, int alen) {
 	datap parser;
-	char* exe; 	// Argument expectation: char* exe = "C:\\Users\\Cj\\Documents\\shared\\16.Beacon Object Files\\persistence\\evil.exe";
+	char* exe; 	// Argument expectation: char* exe = "C:\\Users\\<path>\\persistence\\evil.exe";
 	char* delResult;
 	
 	// Prepare data parser
