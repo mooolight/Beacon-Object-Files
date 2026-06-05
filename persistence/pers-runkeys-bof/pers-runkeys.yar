@@ -28,7 +28,7 @@ rule detect_pers_runkeys {
         (hash.sha256(0,filesize) == "4ea9126794b956463c64b43cce8a8984f92cb374d2fddd21f6e48d1b589cac7c") and
 
         // File size : ~10k bytes
-        filesize >= 140KB and
+        filesize <= 140KB and
 
         // Machine architecture
         (pe.machine == pe.MACHINE_AMD64)
