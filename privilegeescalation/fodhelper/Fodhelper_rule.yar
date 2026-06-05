@@ -32,7 +32,7 @@ rule detect_fodhelper{
         (hash.sha256(0,filesize) == "93865832bf88b1284f36b3504df2d90687d9ad30890924bb50e4be72b26141d2") and
 
         // File size : ~10k bytes
-        filesize >= 145KB and
+        filesize <= 145KB and
 
         // Machine Architecture
         (pe.machine == pe.MACHINE_AMD64)
