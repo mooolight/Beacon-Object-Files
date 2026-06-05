@@ -33,6 +33,20 @@ None
 
 ### Static Analysis
 
+<img width="1391" height="639" alt="1" src="https://github.com/user-attachments/assets/4801edb6-13da-48de-8bd3-19a30eee0359" />  
+
+<img width="1393" height="592" alt="2" src="https://github.com/user-attachments/assets/c54c0a54-a76b-48cc-aa73-7924795cc297" />  
+
+<img width="1396" height="255" alt="3" src="https://github.com/user-attachments/assets/6c4d76fa-8377-4407-ada5-7116e78f8e0d" />  
+
+<img width="1440" height="444" alt="4" src="https://github.com/user-attachments/assets/b95888e6-928e-41c9-9daf-6429b1a1f1ac" />  
+
+<img width="1156" height="515" alt="5" src="https://github.com/user-attachments/assets/c2561f46-78be-42ce-bd11-0b8e5d248bfb" />  
+
+<img width="1029" height="473" alt="6" src="https://github.com/user-attachments/assets/1c0bedd5-0e04-4585-b39c-a5750ddf5360" />  
+
+<img width="553" height="323" alt="7" src="https://github.com/user-attachments/assets/589babd0-3a22-4f83-8f1a-737ecbf8b7a1" />  
+
 
 ### Dynamic Analysis
 
