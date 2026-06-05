@@ -13,7 +13,7 @@ Protections enabled during testing (as of now):
 <div align='center'>
 
 [Collection](#collection)  
-[Credential Access](#credential-access)  
+[CredentialAccess](#credential-access)  
 [Discovery](#discovery)  
 [PrivilegeEscalation](#privilegeescalation)  
 [Execution](#execution)  
