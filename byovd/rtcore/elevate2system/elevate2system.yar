@@ -24,7 +24,7 @@ import "pe"
         (hash.sha256(0,filesize) == "C922BC0C97CE80CDA68E7C2943F7FDE7138043BEA50A4BFD24B1E659C6CA70F7") and
 
         // File size : ~10k bytes
-        filesize >= 170KB and 
+        filesize <= 170KB and 
 
         // Strings
         $file_type and $dvName and $dosName and $drvLoad and $cmdName and $driverName and $serviceName and $deviceName and
