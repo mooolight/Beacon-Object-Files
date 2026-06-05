@@ -21,7 +21,6 @@ Protections enabled during testing (as of now):
 [ProcessInjection](#processinjection)  
 [ActiveDirectory](#activedirectory)  
 [Persistence](#persistence)  
-[PrivilegeEscalation](#privilegeescalation)  
 [MalwareDelivery](#malwaredelivery)  
 [ImpairingDefenses](#impairingdefenses)  
 [DataExfiltration](#dataexfiltration)  
