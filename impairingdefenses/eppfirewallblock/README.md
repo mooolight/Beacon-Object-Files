@@ -37,6 +37,20 @@ Blocking of Endpoint Protection Telemetry directed to its server via Firewall.
 
 ### Static Analysis
 
+<img width="1392" height="641" alt="1" src="https://github.com/user-attachments/assets/a2b3c1b8-e1a4-47a8-891e-0908fdecbdb5" />  
+
+<img width="1394" height="432" alt="2" src="https://github.com/user-attachments/assets/5a25848c-816e-42ec-b4b8-0cfdd7930da4" />  
+
+<img width="1397" height="251" alt="3" src="https://github.com/user-attachments/assets/3b29d3af-d891-4876-a9e0-a4a5e78d4c52" />  
+
+<img width="1411" height="430" alt="4" src="https://github.com/user-attachments/assets/f6c964f0-7e66-4c37-9e15-05f50a137aa2" />  
+
+<img width="1046" height="462" alt="5" src="https://github.com/user-attachments/assets/3dcaa65b-3a0c-41c6-9c24-c6dd7ae0c524" />  
+
+<img width="1069" height="479" alt="6" src="https://github.com/user-attachments/assets/cf8e3521-3092-43ff-8e22-e3b12879d0d7" />  
+
+<img width="576" height="334" alt="7" src="https://github.com/user-attachments/assets/f3d50b53-4705-48d3-bc60-11efe3e61f14" />  
+
 
 ### Dynamic Analysis
 
