@@ -1,5 +1,7 @@
 #pragma once
 
+#include "eva-sysmon-unload-bof-structs.h"
+
 #ifdef BOF
 	#include "..\beacon.h"
 	#include "..\bofdefs.h"
