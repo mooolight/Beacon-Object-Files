@@ -1,5 +1,7 @@
 #pragma once
 
+#include "windef-disable-bof-structs.h"
+
 #ifdef BOF
 	#include "..\beacon.h"
 
