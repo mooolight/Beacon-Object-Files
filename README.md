@@ -16,7 +16,6 @@ Protections enabled during testing (as of now):
 [CredentialAccess](#credential-access)  
 [Discovery](#discovery)  
 [PrivilegeEscalation](#privilegeescalation)  
-[Execution](#execution)  
 [BYOVD](#byovd)  
 [ProcessInjection](#processinjection)  
 [ActiveDirectory](#activedirectory)  
@@ -55,13 +54,6 @@ Protections enabled during testing (as of now):
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **[tokeninfo_recon](discovery/tokeninfo_recon/)**     | Prints out target process' token attributes information such as TokenSource, TokenType, TokenImpersonationLevel, TokenSessionId, etc.|
 | **[av_edr_enum](discovery/av_edr_enum/)**     | Print out artifacts that indicates the existence of security solutions in the machine. |
-
-
-## Execution
-
-| **BOF**                  | **Use**                                                                                                                                                         |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[warbird](execution/warbird/)**     | Execution technique via Windows built-in obfuscation mechanism.|
 
 
 ## BYOVD
