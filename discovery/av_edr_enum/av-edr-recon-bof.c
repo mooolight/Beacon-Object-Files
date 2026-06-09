@@ -146,8 +146,11 @@ HMODULE WINAPI hlpGetModuleHandle(DWORD dllHash) {
 		char* tmpDll = malloc(size + 1);
 		wcstombs( tmpDll, uniDllStr, size + 1 );
 		
-		if( hash_ascii_string( (BYTE*) tmpDll ) == dllHash )
+		if( hash_ascii_string( (BYTE*) tmpDll ) == dllHash ){
+			free(tmpDll);
 			return (HMODULE) pEntry->DllBase;
+		}
+		free(tmpDll);
 	}
 
 	// otherwise:
@@ -382,6 +385,7 @@ void checkServices() {
 		pFunction = funcDynaLoad(hModule, CLOSESERVICEHANDLE, &pFunction);
 		pCloseServiceHandle = (CloseServiceHandle_t)pFunction;
 		pCloseServiceHandle(hSCManager);
+		free(services);
         return;
     }
 	
@@ -397,7 +401,6 @@ void checkServices() {
 							NULL)) {
         PRINT("[-] Failed to enumerate services\n");
         free(services);
-
         CloseServiceHandle_t pCloseServiceHandle = NULL;
 		pFunction = funcDynaLoad(hModule, CLOSESERVICEHANDLE, &pFunction);
 		pCloseServiceHandle = (CloseServiceHandle_t)pFunction;
