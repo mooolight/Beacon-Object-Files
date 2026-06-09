@@ -134,6 +134,7 @@ void PrintTokenUserInformation(HANDLE hToken, HANDLE hHeap, SID_NAME_USE use) {
 	// This extracts the SID blob for the User
     if (!GetTokenInformation(hToken, TokenUser, pTokenUser, token_usersize, &token_usersize)) {    // last param is mandatory
 		CloseHandle(hToken);
+		HeapFree(hHeap);
 		return FALSE;
 	}
 
@@ -143,6 +144,7 @@ void PrintTokenUserInformation(HANDLE hToken, HANDLE hHeap, SID_NAME_USE use) {
 		PRINT("[-] GetTokenInformation (data) failed. Error: %lu\n", GetLastError());
 		LocalFree(pTokenUser);
 		CloseHandle(hToken);
+		HeapFree(hHeap);
 		return FALSE;
 	}
 	PRINT("[+] Successfully validated the SID!\n", GetLastError());
@@ -155,6 +157,7 @@ void PrintTokenUserInformation(HANDLE hToken, HANDLE hHeap, SID_NAME_USE use) {
 		PRINT("ConvertSidToStringSidA failed. Error: %lu.\n\n", dwError);
 		LocalFree(sid);
 		CloseHandle(hToken);
+		HeapFree(hHeap);
 		return FALSE;
 	}
 	
@@ -163,6 +166,7 @@ void PrintTokenUserInformation(HANDLE hToken, HANDLE hHeap, SID_NAME_USE use) {
 	if(LocalFree(sid) != NULL) {
 		PRINT("[-] Cannot free the TOKEN_USER structure.\n");
 		CloseHandle(hToken);
+		HeapFree(hHeap);
 		return FALSE;
 	}
 	
@@ -184,6 +188,7 @@ void PrintTokenUserInformation(HANDLE hToken, HANDLE hHeap, SID_NAME_USE use) {
 	if(!LookupAccountSidA(NULL, pTokenUser->User.Sid, username, &lusername, domain, &ldomain, &use)) { // pls give me the name and domain name that corresponds to that SID
 		PRINT("Failed to extract the SID name...\n");
 		CloseHandle(hToken);
+		HeapFree(hHeap);
 		return FALSE;
 	}
 	PRINT("[+] Domain\\Username: %s\\%s\n", domain, username);
@@ -194,7 +199,7 @@ void PrintTokenUserInformation(HANDLE hToken, HANDLE hHeap, SID_NAME_USE use) {
 	if(GetTokenInformation(hToken, TokenStatistics, &stats, sizeof(stats), &token_usersize)) {
 		PRINT("\nToken Type: %s\n", stats.TokenType == TokenPrimary ? "[+] Primary Token\n\n" : "[*] Impersonation\n\n");
 	}
-	
+	HeapFree(hHeap);	
 	return;
 }
 
