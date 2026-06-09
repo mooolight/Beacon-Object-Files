@@ -1074,6 +1074,7 @@ BOOL GetSystemEproc(DWORD64 * obj) {
     if (status != 0) {
         PRINT("[!] NtQuerySystemInformation failed!\n");
         result = FALSE;
+		free(handleInfo);
 		return result;
     }
 	
@@ -1086,7 +1087,8 @@ BOOL GetSystemEproc(DWORD64 * obj) {
 		result = TRUE;
 	} else
 		result = FALSE;
-	
+
+	free(handleInfo);
 	PRINT("[+] Successfully extracted the SYSTEM process EPROC address!\n");
 	
 	return result;
