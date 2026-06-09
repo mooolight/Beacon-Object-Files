@@ -1083,7 +1083,6 @@ BOOL GetSystemEproc(DWORD64 * obj) {
 	if (handle.UniqueProcessId == 4) {
 		PRINT("PID: %d ; Object: 0x%p\n", handle.UniqueProcessId, handle.Object);
 		*obj = (DWORD64) handle.Object;
-		free(handleInfo);
 		result = TRUE;
 	} else
 		result = FALSE;
