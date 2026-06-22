@@ -1,5 +1,8 @@
 # Windows BOF-Collections
 
+## Goal:
+- Find a way to test a capability without having the need of the entire C2 framework.  
+
 ## Tool for Testing
 - I have used COFFLoader from TrustedSec for local BOF testing.  
 Link: https://github.com/trustedsec/COFFLoader  
