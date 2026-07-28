@@ -134,4 +134,10 @@ Protections enabled during testing (as of now):
 | **[ransomware-sim-bof](impact/)**     | Executes a ransomware simulation on a proof of concept file with the most restricted access control.|
 
 
+## Architecture
+
+- Continuous Operation: A feature that runs in the background consistently (for example: object / registry callbacks).
+- Semi Continuous Operation: A feature that is not running when the driver is loaded but starts after a user request and continues until driver unload or explicit cancellation (for example: IRP hooking).
+- Immediate Operation: An operation with a short lifespan that returns an immediate response (for example: disabling ETW-TI). [/]
+
 DISCLAIMER: These beacon object files are re-creation and analysis of already known techniques. None of the techniques discussed are novel, they have been publicly known and documented by the security research community for many years, and credit is given throughout to the researchers and projects that developed them. The creators and contributors of this repository accept no liability for any loss, damage, or consequences resulting from the use of the information or code contained in this repo. By utilizing this repo, you acknowledge and accept full responsibility for your actions. Use at your own risk.
