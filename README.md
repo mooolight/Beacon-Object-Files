@@ -141,4 +141,7 @@ Protections enabled during testing (as of now):
 - Immediate Operation: An operation with a short lifespan that returns an immediate response (for example: disabling ETW-TI).
   - Beacon-Object-Files project falls into this category.
 
+# Presentation
+- Slides here: 
+
 DISCLAIMER: These beacon object files are re-creation and analysis of already known techniques. None of the techniques discussed are novel, they have been publicly known and documented by the security research community for many years, and credit is given throughout to the researchers and projects that developed them. The creators and contributors of this repository accept no liability for any loss, damage, or consequences resulting from the use of the information or code contained in this repo. By utilizing this repo, you acknowledge and accept full responsibility for your actions. Use at your own risk.
