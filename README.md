@@ -12,7 +12,7 @@ Protections enabled during testing (as of now):
   > '/GS-'  
 - Control Flow Guard (CFG)
 
-## Project Direct References:
+## Project References:
 - adrenaline by atomicszec  
 - atomic-bofs by Rasta-Mouse  
 
