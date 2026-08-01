@@ -20,7 +20,7 @@ Protections enabled during testing (as of now):
 - atomic-bofs by Rasta-Mouse  
 
 # Presentation
-- Slides here: [Windows BOF-Collections-Rough-Draft-presentation.pdf](https://github.com/user-attachments/files/30610248/Windows.BOF-Collections-Rough-Draft-presentation.pdf)
+- Slides here: https://github.com/mooolight/Beacon-Object-Files/blob/main/Windows-BOF-Collections-Rough-Draft-presentation.pdf
 
 ## Table of Contents
 <div align='center'>
