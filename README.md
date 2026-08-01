@@ -22,8 +22,6 @@ Protections enabled during testing (as of now):
 # Presentation
 - Slides here: [Windows BOF-Collections-Rough-Draft-presentation.pdf](https://github.com/user-attachments/files/30610248/Windows.BOF-Collections-Rough-Draft-presentation.pdf)
 
-<iframe src="https://github.com/user-attachments/files/30610248/Windows.BOF-Collections-Rough-Draft-presentation.pdf" width="100%" height="600"></iframe>   
-
 ## Table of Contents
 <div align='center'>
 
