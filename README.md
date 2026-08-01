@@ -1,5 +1,8 @@
 # Windows BOF-Collections
 
+# Research Question:
+- What is an effective approach for testing individual capabilities in isolation from the complete C2 framework?
+
 ## Goal:
 - Find a way to test a capability without having the need of the entire C2 framework.  
 
