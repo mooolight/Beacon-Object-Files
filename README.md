@@ -2,6 +2,7 @@
 
 # Research Question:
 - What is an effective approach for testing individual capabilities in isolation from the complete C2 framework?
+- How is capability different than tradecraft and where is the correct place to implement them?
 
 ## Goal:
 - Find a way to test a capability without having the need of the entire C2 framework.  
