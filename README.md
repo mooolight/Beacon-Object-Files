@@ -140,6 +140,8 @@ Protections enabled during testing (as of now):
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **[ransomware-sim-bof](impact/)**     | Executes a ransomware simulation on a proof of concept file with the most restricted access control.|
+| **[mooo-de-grace](impact/)**     | Test Test Test Test Test Test Test .|
+
 
 
 ## Architecture
