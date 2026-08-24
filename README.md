@@ -22,9 +22,6 @@ Protections enabled during testing (as of now):
 - adrenaline by atomicszec  
 - atomic-bofs by Rasta-Mouse  
 
-# Presentation
-- Slides here: [Windows-BOF-Collections-Rough-Draft-presentation.pdf](https://github.com/user-attachments/files/30620906/Windows-BOF-Collections-Rough-Draft-presentation.pdf)
-
 
 ## Table of Contents
 <div align='center'>
