@@ -139,11 +139,11 @@ Protections enabled during testing (as of now):
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **[ransomware-sim-bof](impact/)**     | Executes a ransomware simulation on a proof of concept file with the most restricted access control.|
-| **[bitlocker-enc](impact/ransom-sim/bitlocker-enc/)**     | Test.|
-| **[create-vhdisk](impact/ransom-sim/create-vhdisk)**     | Test.|
-| **[disable-recovery-msg](impact/ransom-sim/disable-recovery-msg)**     | Test.|
-| **[inhibitsystemrecovery](impact/ransom-sim/inhibitsystemrecovery)**     | Test .|
-| **[winshutdown-wmi](impact/ransom-sim/winshutdown-wmi)**     | Test .|
+| **[bitlocker-enc](impact/ransom-sim/bitlocker-enc/)**     | Deploy a locker through the BitLocker on-device feature.|
+| **[create-vhdisk](impact/ransom-sim/create-vhdisk)**     | Create a virtual hard disk to store the target files.|
+| **[disable-recovery-msg](impact/ransom-sim/disable-recovery-msg)**     | Ignore all recovery features within the boot data.|
+| **[inhibitsystemrecovery](impact/ransom-sim/inhibitsystemrecovery)**     | Stops the Volume Shadow Copy service after deleting them .|
+| **[winshutdown-wmi](impact/ransom-sim/winshutdown-wmi)**     | Reboot the device for the inhibition of system recovery to take effect .|
 | **[mooo-de-grace](impact/mooo-de-grace)**     | Test Test Test Test Test Test Test .|
 
 
