@@ -156,7 +156,7 @@ https://github.com/mooolight/Beacon-Object-Files/blob/main/Windows-BOF-Collectio
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[ransomware-sim-bof](impact/)**     | Executes a ransomware simulation on a proof of concept file with the most restricted access control.|
+| **[copyfiles-ext-wmi-bof](utilities/)**     | Copy files from one source drive to another using WMI.|
 
 
 ## Architecture
