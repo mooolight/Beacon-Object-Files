@@ -43,6 +43,8 @@ https://github.com/mooolight/Beacon-Object-Files/blob/main/Windows-BOF-Collectio
 [ImpairingDefenses](#impairingdefenses)  
 [DataExfiltration](#dataexfiltration)  
 [Impact](#impact)  
+[Utilities](#utilities)  
+
 
 <img width="633" height="350" alt="giphy" src="https://github.com/user-attachments/assets/a17d302c-b332-4e53-a381-73a78190c9c5" />
 
