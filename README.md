@@ -24,7 +24,7 @@ Protections enabled during testing (as of now):
 
 ## Slides Presentation (Rough Draft)
 
-[Windows-BOF-Collections-Rough-Draft-presentation.pdf](https://github.com/user-attachments/files/33004640/Windows-BOF-Collections-Rough-Draft-presentation.pdf)
+https://github.com/mooolight/Beacon-Object-Files/blob/main/Windows-BOF-Collections-Rough-Draft-presentation.pdf
 
 
 
