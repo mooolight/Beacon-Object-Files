@@ -152,6 +152,12 @@ https://github.com/mooolight/Beacon-Object-Files/blob/main/Windows-BOF-Collectio
 | **[mooo-de-grace](impact/mooo-de-grace)**     | Test Test Test Test Test Test Test .|
 
 
+## Utilities
+
+| **BOF**                  | **Use**                                                                                                                                                         |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[ransomware-sim-bof](impact/)**     | Executes a ransomware simulation on a proof of concept file with the most restricted access control.|
+
 
 ## Architecture
 
