@@ -159,7 +159,7 @@ https://github.com/mooolight/Beacon-Object-Files/blob/main/Windows-BOF-Collectio
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **[copyfiles-ext-wmi-bof](utilities/)**     | Copy files of a specific extension from one source drive to another using WMI.|
-| **[copyfiles-dir-wmi-bof](utilities/)**     | Copy files of a specific directory from one source drive to another using WMI.|
+| **[copyfiles-dir-wmi-bof](utilities/)**     | Copy a target directory from one source drive to another using WMI.|
 | **[copyfiles-indiv-wmi-bof](utilities/)**     | Copy a single file from one source drive to another using WMI.|
 
 
