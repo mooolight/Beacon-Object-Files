@@ -139,6 +139,11 @@ Protections enabled during testing (as of now):
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **[ransomware-sim-bof](impact/)**     | Executes a ransomware simulation on a proof of concept file with the most restricted access control.|
+| **[bitlocker-enc](ransom-sim/bitlocker-enc/)**     | Test.|
+| **[create-vhdisk](ransom-sim/create-vhdisk)**     | Test.|
+| **[disable-recovery-msg](ransom-sim/disable-recovery-msg)**     | Test.|
+| **[inhibitsystemrecovery](ransom-sim/inhibitsystemrecovery)**     | Test .|
+| **[winshutdown-wmi](ransom-sim/winshutdown-wmi)**     | Test .|
 | **[mooo-de-grace](impact/mooo-de-grace)**     | Test Test Test Test Test Test Test .|
 
 
