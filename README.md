@@ -20,7 +20,8 @@ Protections enabled during testing (as of now):
 
 ## Project References:
 - adrenaline by atomicszec  
-- atomic-bofs by Rasta-Mouse  
+- atomic-bofs by Rasta-Mouse
+- @Teach2Breach
 
 ## Slides Presentation (Rough Draft)
 
