@@ -138,7 +138,7 @@ https://github.com/mooolight/Beacon-Object-Files/blob/main/Windows-BOF-Collectio
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[test](dataexfiltration/)**     | Test Test Test Test Test Test Test .|
+| **[dataexfil-bmpimage-bof](dataexfiltration/)**     | Data exfiltration via image smuggling. Exfiltrates the data from the compromised system by embedding data gathered into a bmp image file created. |
 
 
 ## Impact
