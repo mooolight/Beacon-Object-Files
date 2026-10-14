@@ -150,8 +150,8 @@ https://github.com/mooolight/Beacon-Object-Files/blob/main/Windows-BOF-Collectio
 | **[bitlocker-enc](impact/ransom-sim/bitlocker-enc/)**     | Deploy a locker through the BitLocker on-device feature.|
 | **[create-vhdisk](impact/ransom-sim/create-vhdisk)**     | Create a virtual hard disk to store the target files.|
 | **[disable-recovery-msg](impact/ransom-sim/disable-recovery-msg)**     | Ignore all recovery failures within the boot data.|
-| **[inhibitsystemrecovery](impact/ransom-sim/inhibitsystemrecovery)**     | Stops the Volume Shadow Copy service after deleting them .|
-| **[winshutdown-wmi](impact/ransom-sim/winshutdown-wmi)**     | Reboot the device for the inhibition of system recovery to take effect .|
+| **[inhibitsystemrecovery](impact/ransom-sim/inhibitsystemrecovery)**     | Stops the Volume Shadow Copy service after deleting them.|
+| **[winshutdown-wmi](impact/ransom-sim/winshutdown-wmi)**     | Reboot the device for the inhibition of system recovery to take effect.|
 | **[mooo-de-grace](impact/mooo-de-grace)**     | Test Test Test Test Test Test Test .|
 
 
