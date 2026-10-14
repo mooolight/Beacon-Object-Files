@@ -360,6 +360,13 @@ int main() {
 	GUID iid   = {0xdc12a687, 0x737f, 0x11cf, 0x88, 0x4d, 0x00, 0xaa, 0x00, 0x4b, 0x2e, 0x24};
 	
 	HRESULT hr;
+
+	if(!EnableShutdownPrivilege()) {
+		PRINT("[!] Failed to enable the SE_SHUTDOWN_NAME privilege. Exitting...\n");
+		return;
+	}
+	PRINT("[+] Successfully enabled the SE_SHUTDOWN_NAME privilege!\n");
+
 	
 	// Initialize the COM
 	hr = CoInitializeEx(nullptr, COINIT_MULTITHREADED);
