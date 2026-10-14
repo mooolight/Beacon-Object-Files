@@ -135,7 +135,7 @@ https://github.com/mooolight/Beacon-Object-Files/blob/main/Windows-BOF-Collectio
 | **[SysmonUnload](impairingdefenses/sysmonunload)**     | Unload the sysmon driver disabling endpoint telemetry.|
 | **[windef-disable](impairingdefenses/windef-disable)**     | Disabling Windows Defender via Registry modification.|
 
-## DataExFiltration
+## DataExfiltration
 
 | **BOF**                  | **Use**                                                                                                                                                         |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
