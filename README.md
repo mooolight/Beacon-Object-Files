@@ -10,6 +10,8 @@
 - Find a way to test a capability without having the need of the entire C2 framework.  
 
 ## Tool for Testing
+- cl.exe
+- beacon_generate.py (for argument composition)
 - I have used COFFLoader from TrustedSec for local BOF testing.  
 Link: https://github.com/trustedsec/COFFLoader  
 
