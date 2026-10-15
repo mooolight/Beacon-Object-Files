@@ -10,8 +10,7 @@ Beacon>addint <chunk-size>
 Beacon>addstring <no|yes>
 Beacon>generate
 
-<img width="1219" height="484" alt="Screenshot From 2026-10-12 20-22-13" src="https://github.com/user-attachments/assets/eb1f539d-4f0a-4514-8bd3-f3edf1d8bcec" />
-
+<img width="665" height="222" alt="Screenshot From 2026-10-15 05-56-47" src="https://github.com/user-attachments/assets/fa0227ca-c002-4870-8c18-bcea71393d6e" />
 
 # Reference:
 - @Teach2Breach's PoC
