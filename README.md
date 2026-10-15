@@ -9,6 +9,10 @@
 ## Goal:
 - Find a way to test a capability without having the need of the entire C2 framework.  
 
+## Architecture
+- x86 (not yet suppported)
+- x64
+
 ## Tool for Testing
 - cl.exe
 - beacon_generate.py (for argument composition)
@@ -167,7 +171,7 @@ https://github.com/mooolight/Beacon-Object-Files/blob/main/Windows-BOF-Collectio
 
 
 
-## Architecture
+## Architecture Op Type:
 
 - Continuous Operation: A feature that runs in the background consistently (for example: object / registry callbacks).
 - Semi Continuous Operation: A feature that is not running when the driver is loaded but starts after a user request and continues until driver unload or explicit cancellation (for example: IRP hooking).
