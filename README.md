@@ -10,7 +10,7 @@
 - Find a way to test a capability without having the need of the entire C2 framework.  
 
 ## Architecture
-- x86 (not yet suppported)
+- x86 (not suppported yet)
 - x64
 
 ## Tool for Testing
